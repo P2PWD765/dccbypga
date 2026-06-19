@@ -25,24 +25,24 @@ export const Route = createFileRoute("/nosotros")({
 
 const team = [
   {
-    name: "Carlos Domínguez",
-    role: "Director General",
-    bio: "Más de 20 años de experiencia en consultoría estratégica y transformación empresarial. Ex-socio de una de las principales firmas internacionales.",
+    name: "David Edgardo Ruiz Enríquez",
+    role: "Contacto: Druiz@dcc-asesores.com\nTelefono: 442 285 3839",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
   {
-    name: "María Elena Cortés",
-    role: "Directora Financiera",
-    bio: "Especialista en planeación financiera, fusiones y adquisiciones. Ha liderado proyectos de capitalización por más de 500 MUSD.",
+    name: "Carlos Alberto Villegas Pérez",
+    role: "Contacto: Cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
   {
-    name: "Ricardo Villarreal",
-    role: "Director de Operaciones",
-    bio: "Experto en optimización de procesos, cadena de suministro y gobierno corporativo. Consultor certificado en Lean Six Sigma.",
+    name: "Juan Rulfo",
+    role: "Contacto",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
   {
-    name: "Ana Paula Méndez",
-    role: "Directora de Estrategia",
-    bio: "Apasionada por la innovación y el crecimiento sostenible. Asesora a directivos en la toma de decisiones estratégicas de largo alcance.",
+    name: "Juan Rulfo 2",
+    role: "Contacto",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
 ];
 
@@ -92,7 +92,7 @@ function TeamGrid() {
                 <User className="h-12 w-12 text-brand-mid" />
               </div>
               <h3 className="text-lg font-bold text-brand">{member.name}</h3>
-              <p className="mt-1 text-sm font-medium text-brand-teal">
+              <p className="mt-1 text-sm font-medium text-brand-teal whitespace-pre-line">
                 {member.role}
               </p>
               <p className="mt-4 text-sm leading-relaxed text-brand-mid">
