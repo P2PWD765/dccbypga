@@ -39,11 +39,6 @@ const team = [
     role: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
-  {
-    name: "Juan Rulfo\u00a0",
-    role: "Contacto",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
-  },
 ];
 
 function NosotrosPage() {
