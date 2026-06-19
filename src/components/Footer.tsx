@@ -23,15 +23,15 @@ export function Footer() {
           <ul className="space-y-3 text-sm text-white/85">
             <li className="flex items-center gap-3">
               <Mail className="h-4 w-4 text-white/60" />
-              contacto@dccasesores.com
+              contacto
             </li>
             <li className="flex items-center gap-3">
               <Phone className="h-4 w-4 text-white/60" />
-              +52 (55) 1234 5678
+              TKTK
             </li>
             <li className="flex items-center gap-3">
               <MapPin className="h-4 w-4 text-white/60" />
-              Av. Reforma 222, CDMX
+              TKTK
             </li>
           </ul>
         </div>
