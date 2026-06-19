@@ -1,11 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ChevronDown, Play, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { createFileRoute } from "@tanstack/react-router";
+import { Play, ArrowRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -13,7 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import logo from "@/assets/dcc-logo.png";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -35,14 +30,6 @@ export const Route = createFileRoute("/home")({
   component: HomePage,
 });
 
-const industrias = [
-  "Construcción",
-  "Manufactura",
-  "Comercio y Retail",
-  "Servicios Profesionales",
-  "Agroindustria",
-  "Tecnología",
-];
 
 const noticias = [
   {
@@ -93,51 +80,6 @@ function HomePage() {
       <Vlogs />
       <Footer />
     </div>
-  );
-}
-
-function Navbar() {
-  return (
-    <header className="sticky top-0 z-50 w-full bg-brand text-white shadow-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/home" className="flex items-center gap-3">
-          <div className="rounded bg-white px-2 py-1">
-            <img src={logo} alt="DCC" className="h-7 w-auto" />
-          </div>
-          <span className="hidden text-sm font-medium uppercase tracking-[0.18em] sm:inline">
-            DCC Asesores
-          </span>
-        </Link>
-
-        <nav className="flex items-center gap-1 sm:gap-2">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 focus:outline-none">
-              Servicios <ChevronDown className="h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              {industrias.map((i) => (
-                <DropdownMenuItem key={i}>{i}</DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
-          <button className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10">
-            Nosotros
-          </button>
-
-          <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 focus:outline-none">
-              Conócenos <ChevronDown className="h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-52">
-              <DropdownMenuItem>Nuestra historia</DropdownMenuItem>
-              <DropdownMenuItem>Nuestra trayectoria</DropdownMenuItem>
-              <DropdownMenuItem>Ubicación</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </nav>
-      </div>
-    </header>
   );
 }
 
@@ -308,62 +250,5 @@ function Vlogs() {
         </Carousel>
       </div>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-brand text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-3">
-        <div>
-          <div className="mb-5 inline-block rounded bg-white px-3 py-2">
-            <img src={logo} alt="DCC" className="h-10 w-auto" />
-          </div>
-          <p className="max-w-xs text-sm leading-relaxed text-white/70">
-            Asesoría empresarial estratégica, financiera y fiscal para
-            empresas que buscan crecer con visión a largo plazo.
-          </p>
-        </div>
-
-        <div>
-          <h4 className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-white/60">
-            Contacto
-          </h4>
-          <ul className="space-y-3 text-sm text-white/85">
-            <li className="flex items-center gap-3">
-              <Mail className="h-4 w-4 text-white/60" />
-              contacto@dccasesores.com
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone className="h-4 w-4 text-white/60" />
-              +52 (55) 1234 5678
-            </li>
-            <li className="flex items-center gap-3">
-              <MapPin className="h-4 w-4 text-white/60" />
-              Av. Reforma 222, CDMX
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-white/60">
-            Enlaces
-          </h4>
-          <ul className="space-y-3 text-sm text-white/85">
-            <li className="cursor-pointer transition-colors hover:text-white">Servicios</li>
-            <li className="cursor-pointer transition-colors hover:text-white">Nuestra historia</li>
-            <li className="cursor-pointer transition-colors hover:text-white">Nuestra trayectoria</li>
-            <li className="cursor-pointer transition-colors hover:text-white">Ubicación</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-white/60 sm:flex-row">
-          <span>© 2026 DCC Asesores Empresariales. Todos los derechos reservados.</span>
-          <span>Aviso de privacidad · Términos</span>
-        </div>
-      </div>
-    </footer>
   );
 }
