@@ -56,8 +56,8 @@ export function Navbar() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-52">
               <DropdownMenuItem asChild>
-                <Link to="/conocenos/historia" className="cursor-pointer">
-                  Nuestra historia
+                <Link to="/conocenos/cultura" className="cursor-pointer">
+                  Nuestra cultura organizacional
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>Nuestra trayectoria</DropdownMenuItem>
