@@ -9,12 +9,10 @@ import {
 import logo from "@/assets/dcc-logo.png";
 
 const industrias = [
-  "Construcción",
-  "Manufactura",
-  "Comercio y Retail",
-  "Servicios Profesionales",
-  "Agroindustria",
-  "Tecnología",
+  "Controversia",
+  "Asesoría",
+  "Cumplimento y Devoluciones",
+  "Otros servicios",
 ];
 
 export function Navbar() {
