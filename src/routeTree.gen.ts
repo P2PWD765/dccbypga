@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ConocenosHistoriaRouteImport } from './routes/conocenos.historia'
 
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
@@ -28,35 +29,44 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConocenosHistoriaRoute = ConocenosHistoriaRouteImport.update({
+  id: '/conocenos/historia',
+  path: '/conocenos/historia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/home': typeof HomeRoute
   '/nosotros': typeof NosotrosRoute
+  '/conocenos/historia': typeof ConocenosHistoriaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/home': typeof HomeRoute
   '/nosotros': typeof NosotrosRoute
+  '/conocenos/historia': typeof ConocenosHistoriaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/home': typeof HomeRoute
   '/nosotros': typeof NosotrosRoute
+  '/conocenos/historia': typeof ConocenosHistoriaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/home' | '/nosotros'
+  fullPaths: '/' | '/home' | '/nosotros' | '/conocenos/historia'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/home' | '/nosotros'
-  id: '__root__' | '/' | '/home' | '/nosotros'
+  to: '/' | '/home' | '/nosotros' | '/conocenos/historia'
+  id: '__root__' | '/' | '/home' | '/nosotros' | '/conocenos/historia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HomeRoute: typeof HomeRoute
   NosotrosRoute: typeof NosotrosRoute
+  ConocenosHistoriaRoute: typeof ConocenosHistoriaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +92,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/conocenos/historia': {
+      id: '/conocenos/historia'
+      path: '/conocenos/historia'
+      fullPath: '/conocenos/historia'
+      preLoaderRoute: typeof ConocenosHistoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HomeRoute: HomeRoute,
   NosotrosRoute: NosotrosRoute,
+  ConocenosHistoriaRoute: ConocenosHistoriaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
