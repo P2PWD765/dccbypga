@@ -26,21 +26,21 @@ export const Route = createFileRoute("/nosotros")({
 const team = [
   {
     name: "David Edgardo Ruiz Enríquez",
-    role: "Contacto: Druiz@dcc-asesores.com\nTelefono: 442 285 3839",
+    role: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
   {
     name: "Carlos Alberto Villegas Pérez",
-    role: "Contacto: Cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
+    role: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
   {
-    name: "Juan Rulfo",
-    role: "Contacto",
+    name: "César Hernandez",
+    role: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
   {
-    name: "Juan Rulfo 2",
+    name: "Juan Rulfo\u00a0",
     role: "Contacto",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
   },
