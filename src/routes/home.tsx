@@ -62,7 +62,7 @@ const noticias = [
   },
 ];
 
-const vlogs = [
+const blogs = [
   { title: "Estrategia financiera para PyMEs", duration: "12:04" },
   { title: "Optimización fiscal 2026", duration: "08:32" },
   { title: "Transformación digital empresarial", duration: "15:21" },
@@ -77,7 +77,7 @@ function HomePage() {
       <Navbar />
       <Hero />
       <Noticias />
-      <Vlogs />
+      <Blogs />
       <Footer />
     </div>
   );
@@ -194,7 +194,7 @@ function Noticias() {
   );
 }
 
-function Vlogs() {
+function Blogs() {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -203,13 +203,13 @@ function Vlogs() {
             Conocimiento
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
-            Vlogs Destacados
+            Blogs Destacados
           </h2>
         </div>
 
         <Carousel opts={{ align: "start", loop: false }} className="w-full">
           <CarouselContent className="-ml-6">
-            {vlogs.map((v, idx) => (
+            {blogs.map((v, idx) => (
               <CarouselItem
                 key={v.title}
                 className="pl-6 md:basis-1/2 lg:basis-1/3"
