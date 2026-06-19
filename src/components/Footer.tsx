@@ -41,7 +41,7 @@ export function Footer() {
           </h4>
           <ul className="space-y-3 text-sm text-white/85">
             <li className="cursor-pointer transition-colors hover:text-white">Servicios</li>
-            <li className="cursor-pointer transition-colors hover:text-white">Nuestra historia</li>
+            <li><Link to="/conocenos/historia" className="transition-colors hover:text-white">Nuestra historia</Link></li>
             <li className="cursor-pointer transition-colors hover:text-white">Nuestra trayectoria</li>
             <li className="cursor-pointer transition-colors hover:text-white">Ubicación</li>
           </ul>
