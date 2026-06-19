@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin } from "lucide-react";
 import logo from "@/assets/dcc-logo.png";
 
