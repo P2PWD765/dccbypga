@@ -62,7 +62,7 @@ const noticias = [
   },
 ];
 
-const vlogs = [
+const blogs = [
   { title: "Estrategia financiera para PyMEs", duration: "12:04" },
   { title: "Optimización fiscal 2026", duration: "08:32" },
   { title: "Transformación digital empresarial", duration: "15:21" },
@@ -77,124 +77,13 @@ function HomePage() {
       <Navbar />
       <Hero />
       <Noticias />
-      <Vlogs />
+      <Blogs />
       <Footer />
     </div>
   );
 }
 
-function Hero() {
-  return (
-    <section
-      className="relative overflow-hidden text-white"
-      style={{
-        background:
-          "linear-gradient(135deg, #13396F 0%, #1a4582 45%, #015B67 100%)",
-      }}
-    >
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-        }}
-      />
-      <div className="relative mx-auto max-w-5xl px-6 py-28 sm:py-36 md:py-44">
-        <p className="mb-6 text-xs font-medium uppercase tracking-[0.4em] text-white/70">
-          Consultoría Empresarial
-        </p>
-        <h1 className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-          Estrategia, claridad y resultados para empresas que buscan crecer con
-          inteligencia.
-        </h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/80">
-          En DCC Asesores Empresariales acompañamos a líderes y directivos con
-          asesoría financiera, fiscal y estratégica diseñada para transformar
-          retos en oportunidades sostenibles.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <button
-            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-brand transition-all hover:bg-brand-ice hover:-translate-y-0.5"
-          >
-            Conozca nuestros servicios <ArrowRight className="h-4 w-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10">
-            Contáctenos
-          </button>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Noticias() {
-  return (
-    <section className="bg-brand-ice py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-14 flex items-end justify-between gap-6">
-          <div>
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand-teal">
-              Actualidad
-            </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
-              Noticias y Anuncios
-            </h2>
-          </div>
-          <a className="hidden text-sm font-medium text-brand-teal hover:underline sm:inline">
-            Ver todo →
-          </a>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {noticias.map((n, i) => (
-            <article
-              key={n.title}
-              className={`group flex flex-col rounded-2xl p-7 shadow-sm ring-1 transition-all hover:-translate-y-1 hover:shadow-xl ${
-                i % 2 === 0
-                  ? "bg-white ring-black/5"
-                  : "bg-brand-mid text-white ring-transparent"
-              }`}
-            >
-              <span
-                className={`mb-5 inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-wider ${
-                  i % 2 === 0
-                    ? "bg-brand-ice text-brand"
-                    : "bg-white/15 text-white"
-                }`}
-              >
-                {n.tag}
-              </span>
-              <h3
-                className={`mb-3 text-lg font-semibold leading-snug ${
-                  i % 2 === 0 ? "text-brand" : "text-white"
-                }`}
-              >
-                {n.title}
-              </h3>
-              <p
-                className={`mb-6 text-sm leading-relaxed ${
-                  i % 2 === 0 ? "text-slate-600" : "text-white/80"
-                }`}
-              >
-                {n.excerpt}
-              </p>
-              <div
-                className={`mt-auto flex items-center justify-between text-xs ${
-                  i % 2 === 0 ? "text-slate-500" : "text-white/70"
-                }`}
-              >
-                <span>{n.date}</span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Vlogs() {
+function Blogs() {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
@@ -203,13 +92,13 @@ function Vlogs() {
             Conocimiento
           </p>
           <h2 className="text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
-            Vlogs Destacados
+            Blogs Destacados
           </h2>
         </div>
 
         <Carousel opts={{ align: "start", loop: false }} className="w-full">
           <CarouselContent className="-ml-6">
-            {vlogs.map((v, idx) => (
+            {blogs.map((v, idx) => (
               <CarouselItem
                 key={v.title}
                 className="pl-6 md:basis-1/2 lg:basis-1/3"
