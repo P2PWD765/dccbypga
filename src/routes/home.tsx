@@ -1,11 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ChevronDown, Play, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { createFileRoute } from "@tanstack/react-router";
+import { Play, ArrowRight } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -13,7 +7,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import logo from "@/assets/dcc-logo.png";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
