@@ -20,6 +20,11 @@
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand: var(--brand);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-mid: var(--brand-mid);
+  --color-brand-ice: var(--brand-ice);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
@@ -63,6 +68,10 @@
 
 :root {
   --radius: 0.625rem;
+  --brand: #13396F;
+  --brand-teal: #015B67;
+  --brand-mid: #2A5B84;
+  --brand-ice: #E8F1F5;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -140,5 +149,7 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
 }
