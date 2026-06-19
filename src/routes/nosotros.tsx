@@ -62,18 +62,16 @@ function Header() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "#E8F1F5" }}
+      style={{ background: "#13396F" }}
     >
       <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-28 md:py-32 text-center">
         <h1
-          className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl"
-          style={{ color: "#13396F" }}
+          className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl text-white"
         >
           Sobre nosotros
         </h1>
         <p
-          className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed"
-          style={{ color: "#2A5B84" }}
+          className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white/90"
         >
           Experiencia, estrategia y seguridad jurídica.
         </p>
