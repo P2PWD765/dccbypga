@@ -57,7 +57,7 @@ function Header() {
   return (
     <section
       className="relative overflow-hidden"
-      style={{ background: "#064E3B" }}
+      style={{ background: "#344E41" }}
     >
       <div className="relative mx-auto max-w-5xl px-6 py-24 sm:py-28 md:py-32 text-center">
         <h1
@@ -81,7 +81,7 @@ function Overview() {
       <div className="mx-auto max-w-3xl px-6">
         <p
           className="text-base sm:text-lg leading-relaxed text-justify"
-          style={{ color: "#064E3B" }}
+          style={{ color: "#344E41" }}
         >
           Somos una firma conformada por profesionales con una trayectoria de
           más de 30 años de experiencia en el ámbito fiscal y de negocios.
@@ -107,7 +107,7 @@ function TeamGrid() {
         <div className="mb-14 text-center">
           <h2
             className="text-3xl font-semibold tracking-tight sm:text-4xl"
-            style={{ color: "#064E3B" }}
+            style={{ color: "#344E41" }}
           >
             Nuestro Equipo
           </h2>
