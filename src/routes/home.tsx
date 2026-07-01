@@ -89,7 +89,7 @@ function Hero() {
       className="relative overflow-hidden text-white"
       style={{
         background:
-          "linear-gradient(135deg, #064E3B 0%, #0B5E48 45%, #10B981 100%)",
+          "linear-gradient(135deg, #344E41 0%, #3A5A40 45%, #588157 100%)",
       }}
     >
       <div
@@ -220,10 +220,10 @@ function Blogs() {
                     style={{
                       background:
                         idx % 3 === 0
-                          ? "linear-gradient(135deg,#064E3B,#065F46)"
+                          ? "linear-gradient(135deg,#344E41,#3A5A40)"
                           : idx % 3 === 1
-                          ? "linear-gradient(135deg,#10B981,#065F46)"
-                          : "linear-gradient(135deg,#065F46,#064E3B)",
+                          ? "linear-gradient(135deg,#588157,#3A5A40)"
+                          : "linear-gradient(135deg,#3A5A40,#344E41)",
                     }}
                   >
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-lg transition-transform group-hover:scale-110">
