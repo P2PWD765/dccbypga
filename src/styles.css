@@ -68,10 +68,10 @@
 
 :root {
   --radius: 0.625rem;
-  --brand: #344E41;
-  --brand-teal: #588157;
-  --brand-mid: #3A5A40;
-  --brand-ice: #DAD7CD;
+  --brand: #064E3B;
+  --brand-teal: #10B981;
+  --brand-mid: #065F46;
+  --brand-ice: #F8FAFC;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);

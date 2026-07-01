@@ -55,10 +55,10 @@ export function Footer() {
             href="https://www.linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-all hover:border-[#588157] hover:bg-[#588157]/15 hover:text-[#DAD7CD]"
+            className="group inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition-all hover:border-[#10B981] hover:bg-[#10B981]/15 hover:text-[#6EE7B7]"
           >
             <svg
-              className="h-5 w-5 transition-colors group-hover:text-[#DAD7CD]"
+              className="h-5 w-5 transition-colors group-hover:text-[#6EE7B7]"
               viewBox="0 0 24 24"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
