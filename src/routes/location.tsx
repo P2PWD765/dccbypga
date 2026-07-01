@@ -67,32 +67,33 @@ function LocationPage() {
           {offices.map((o) => (
             <article
               key={o.code}
-              className="flex flex-col rounded-2xl bg-white p-8 shadow-sm ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="flex flex-col rounded-2xl p-8 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              style={{ backgroundColor: "#A3B18A", color: "#344E41" }}
             >
               <div className="mb-5 flex items-center gap-3">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-brand-ice">
-                  <MapPin className="h-6 w-6 text-brand-teal" />
+                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-white/40">
+                  <MapPin className="h-6 w-6" style={{ color: "#344E41" }} />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-teal">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: "#344E41" }}>
                     {o.code}
                   </p>
-                  <h2 className="truncate text-xl font-bold text-brand">
+                  <h2 className="truncate text-xl font-bold" style={{ color: "#344E41" }}>
                     {o.city}
                   </h2>
                 </div>
               </div>
-              <dl className="mt-2 space-y-3 text-sm text-brand-mid">
+              <dl className="mt-2 space-y-3 text-sm" style={{ color: "#344E41" }}>
                 <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-teal" />
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#344E41" }} />
                   <dd>{o.address}</dd>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-brand-teal" />
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#344E41" }} />
                   <dd>{o.phone}</dd>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-4 w-4 shrink-0 text-brand-teal" />
+                  <Mail className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#344E41" }} />
                   <dd>{o.email}</dd>
                 </div>
               </dl>
