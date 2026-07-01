@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as LocationRouteImport } from './routes/location'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ConocenosHistoriaRouteImport } from './routes/conocenos.historia'
@@ -18,6 +19,11 @@ import { Route as ConocenosCulturaRouteImport } from './routes/conocenos.cultura
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
   path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationRoute = LocationRouteImport.update({
+  id: '/location',
+  path: '/location',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HomeRoute = HomeRouteImport.update({
@@ -44,6 +50,7 @@ const ConocenosCulturaRoute = ConocenosCulturaRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/home': typeof HomeRoute
+  '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/home': typeof HomeRoute
+  '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
@@ -59,6 +67,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/home': typeof HomeRoute
+  '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
@@ -68,15 +77,23 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/home'
+    | '/location'
     | '/nosotros'
     | '/conocenos/cultura'
     | '/conocenos/historia'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/home' | '/nosotros' | '/conocenos/cultura' | '/conocenos/historia'
+  to:
+    | '/'
+    | '/home'
+    | '/location'
+    | '/nosotros'
+    | '/conocenos/cultura'
+    | '/conocenos/historia'
   id:
     | '__root__'
     | '/'
     | '/home'
+    | '/location'
     | '/nosotros'
     | '/conocenos/cultura'
     | '/conocenos/historia'
@@ -85,6 +102,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HomeRoute: typeof HomeRoute
+  LocationRoute: typeof LocationRoute
   NosotrosRoute: typeof NosotrosRoute
   ConocenosCulturaRoute: typeof ConocenosCulturaRoute
   ConocenosHistoriaRoute: typeof ConocenosHistoriaRoute
@@ -97,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/nosotros'
       fullPath: '/nosotros'
       preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/location': {
+      id: '/location'
+      path: '/location'
+      fullPath: '/location'
+      preLoaderRoute: typeof LocationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/home': {
@@ -133,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HomeRoute: HomeRoute,
+  LocationRoute: LocationRoute,
   NosotrosRoute: NosotrosRoute,
   ConocenosCulturaRoute: ConocenosCulturaRoute,
   ConocenosHistoriaRoute: ConocenosHistoriaRoute,

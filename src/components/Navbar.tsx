@@ -59,7 +59,11 @@ export function Navbar() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>Nuestra trayectoria</DropdownMenuItem>
-              <DropdownMenuItem>Ubicación</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/location" className="cursor-pointer">
+                  Ubicación
+                </Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </nav>
