@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Play, ArrowRight } from "lucide-react";
 import {
   Carousel,
@@ -214,7 +214,39 @@ function Blogs() {
                 key={v.title}
                 className="pl-6 md:basis-1/2 lg:basis-1/3"
               >
+                {idx === 0 ? (
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: "vlog-1" }}
+                  className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <BlogCardInner v={v} idx={idx} />
+                </Link>
+                ) : (
                 <div className="group cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl">
+                  <BlogCardInner v={v} idx={idx} />
+                </div>
+                )}
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="-left-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
+          <CarouselNext className="-right-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
+        </Carousel>
+      </div>
+    </section>
+  );
+}
+
+function BlogCardInner({
+  v,
+  idx,
+}: {
+  v: { title: string; duration: string };
+  idx: number;
+}) {
+  return (
+    <>
                   <div
                     className="relative flex aspect-video items-center justify-center overflow-hidden"
                     style={{
@@ -241,14 +273,6 @@ function Blogs() {
                       DCC Insights · Episodio {idx + 1}
                     </p>
                   </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="-left-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
-          <CarouselNext className="-right-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
-        </Carousel>
-      </div>
-    </section>
+    </>
   );
 }

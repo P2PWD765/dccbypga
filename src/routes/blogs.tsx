@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Play } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -49,10 +49,41 @@ function BlogsPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blogs.map((v, idx) => (
+              idx === 0 ? (
+              <Link
+                key={v.title}
+                to="/blog/$slug"
+                params={{ slug: "vlog-1" }}
+                className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
+              >
+                <CardBody v={v} idx={idx} />
+              </Link>
+              ) : (
               <div
                 key={v.title}
                 className="group cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
               >
+                <CardBody v={v} idx={idx} />
+              </div>
+              )
+            ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </div>
+  );
+}
+
+function CardBody({
+  v,
+  idx,
+}: {
+  v: { title: string; duration: string };
+  idx: number;
+}) {
+  return (
+    <>
                 <div
                   className="relative flex aspect-video items-center justify-center overflow-hidden"
                   style={{
@@ -79,12 +110,6 @@ function BlogsPage() {
                     DCC Insights · Episodio {idx + 1}
                   </p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
+    </>
   );
 }
