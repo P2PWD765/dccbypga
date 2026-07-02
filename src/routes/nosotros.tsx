@@ -2,6 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { User } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export const Route = createFileRoute("/nosotros")({
   head: () => ({
@@ -114,21 +121,41 @@ function TeamGrid() {
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member) => (
-            <article
-              key={member.name}
-              className="group flex flex-col items-center rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
-                <User className="h-12 w-12 text-brand-mid" />
-              </div>
-              <h3 className="text-lg font-bold text-brand">{member.name}</h3>
-              <p className="mt-1 text-sm font-medium text-brand-teal whitespace-pre-line">
-                {member.role}
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-brand-mid">
-                {member.bio}
-              </p>
-            </article>
+            <Dialog key={member.name}>
+              <DialogTrigger asChild>
+                <button
+                  type="button"
+                  className="group flex flex-col items-center rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                >
+                  <div className="mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
+                    <User className="h-12 w-12 text-brand-mid" />
+                  </div>
+                  <h3 className="text-lg font-bold text-brand">{member.name}</h3>
+                  <p className="mt-1 text-sm font-medium text-brand-teal whitespace-pre-line">
+                    {member.role}
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-brand-mid">
+                    {member.bio}
+                  </p>
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-lg">
+                <DialogHeader>
+                  <div className="mx-auto mb-4 flex h-32 w-32 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
+                    <User className="h-14 w-14 text-brand-mid" />
+                  </div>
+                  <DialogTitle className="text-center text-2xl text-brand">
+                    {member.name}
+                  </DialogTitle>
+                  <p className="mt-2 text-center text-sm font-medium text-brand-teal whitespace-pre-line">
+                    {member.role}
+                  </p>
+                </DialogHeader>
+                <div className="mt-4 max-h-[50vh] overflow-y-auto px-2 text-sm leading-relaxed text-brand-mid">
+                  {member.bio}
+                </div>
+              </DialogContent>
+            </Dialog>
           ))}
         </div>
       </div>
