@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { User } from "lucide-react";
+import davidRuizAsset from "@/assets/david-ruiz.png.asset.json";
 import {
   Dialog,
   DialogContent,
@@ -35,16 +36,19 @@ const team = [
     name: "David Edgardo Ruiz Enríquez",
     role: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
+    photo: davidRuizAsset.url,
   },
   {
     name: "Carlos Alberto Villegas Pérez",
     role: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
+    photo: null,
   },
   {
     name: "César Hernandez",
     role: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
+    photo: null,
   },
 ];
 
@@ -128,7 +132,15 @@ function TeamGrid() {
                   className="group flex flex-col items-center rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
                 >
                   <div className="mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
-                    <User className="h-12 w-12 text-brand-mid" />
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="h-full w-full rounded-full object-cover"
+                      />
+                    ) : (
+                      <User className="h-12 w-12 text-brand-mid" />
+                    )}
                   </div>
                   <h3 className="text-lg font-bold text-brand">{member.name}</h3>
                   <p className="mt-1 text-sm font-medium text-brand-teal whitespace-pre-line">
@@ -142,7 +154,15 @@ function TeamGrid() {
               <DialogContent className="max-w-lg">
                 <DialogHeader>
                   <div className="mx-auto mb-4 flex h-32 w-32 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
-                    <User className="h-14 w-14 text-brand-mid" />
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="h-full w-full rounded-full object-cover"
+                      />
+                    ) : (
+                      <User className="h-14 w-14 text-brand-mid" />
+                    )}
                   </div>
                   <DialogTitle className="text-center text-2xl text-brand">
                     {member.name}
