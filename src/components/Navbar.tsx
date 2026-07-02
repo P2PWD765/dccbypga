@@ -48,6 +48,14 @@ export function Navbar() {
             Nosotros
           </Link>
 
+          <Link
+            to="/blogs"
+            className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10"
+            activeProps={{ className: "bg-white/15" }}
+          >
+            Blogs
+          </Link>
+
           <DropdownMenu>
             <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 focus:outline-none">
               Conócenos <ChevronDown className="h-4 w-4" />
