@@ -16,6 +16,7 @@ import { Route as BlogsRouteImport } from './routes/blogs'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ConocenosHistoriaRouteImport } from './routes/conocenos.historia'
 import { Route as ConocenosCulturaRouteImport } from './routes/conocenos.cultura'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
@@ -52,6 +53,11 @@ const ConocenosCulturaRoute = ConocenosCulturaRouteImport.update({
   path: '/conocenos/cultura',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/home': typeof HomeRoute
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/home': typeof HomeRoute
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/home': typeof HomeRoute
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/home'
     | '/location'
     | '/nosotros'
+    | '/blog/$slug'
     | '/conocenos/cultura'
     | '/conocenos/historia'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/home'
     | '/location'
     | '/nosotros'
+    | '/blog/$slug'
     | '/conocenos/cultura'
     | '/conocenos/historia'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/home'
     | '/location'
     | '/nosotros'
+    | '/blog/$slug'
     | '/conocenos/cultura'
     | '/conocenos/historia'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   HomeRoute: typeof HomeRoute
   LocationRoute: typeof LocationRoute
   NosotrosRoute: typeof NosotrosRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   ConocenosCulturaRoute: typeof ConocenosCulturaRoute
   ConocenosHistoriaRoute: typeof ConocenosHistoriaRoute
 }
@@ -172,6 +185,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConocenosCulturaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   HomeRoute: HomeRoute,
   LocationRoute: LocationRoute,
   NosotrosRoute: NosotrosRoute,
+  BlogSlugRoute: BlogSlugRoute,
   ConocenosCulturaRoute: ConocenosCulturaRoute,
   ConocenosHistoriaRoute: ConocenosHistoriaRoute,
 }
