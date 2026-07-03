@@ -1,6 +1,27 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { MapPin, MessageCircle, Linkedin, ChevronDown } from "lucide-react";
 import logo from "@/assets/dcc-logo.png";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+
+const officeRoutes = [
+  {
+    city: "Monterrey",
+    url: "https://www.google.com/maps/dir/?api=1&destination=Dr.+Roberto+J.+Cant%C3%BA+2777,+Ampliaci%C3%B3n+Comercial+Doctores,+64710+Monterrey,+N.L.",
+  },
+  {
+    city: "Ciudad de México",
+    url: "https://www.google.com/maps/dir/?api=1&destination=Paseo+de+la+Reforma+250,+Juárez,+06600+Ciudad+de+México,+CDMX",
+  },
+  {
+    city: "Querétaro",
+    url: "https://www.google.com/maps/dir/?api=1&destination=Blvd.+Bernardo+Quintana,+Centro+Sur,+76090+Santiago+de+Querétaro,+Qro.",
+  },
+];
 
 export function Footer() {
   return (
@@ -20,25 +41,43 @@ export function Footer() {
           <h4 className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-white/60">
             Contacto
           </h4>
-          <ul className="space-y-3 text-sm text-white/85">
-            <li className="flex items-center gap-3">
-              <Mail className="h-4 w-4 text-white/60" />
-              contacto
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone className="h-4 w-4 text-white/60" />
-              TKTK
-            </li>
-            <li>
-              <Link
-                to="/location"
-                className="flex items-center gap-3 transition-colors hover:text-white"
-              >
-                <MapPin className="h-4 w-4 text-white/60" />
+          <div className="flex flex-col gap-3">
+            <a
+              href="https://wa.me/5210000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white transition-all hover:border-[#10B981] hover:bg-[#10B981]/15 hover:text-[#6EE7B7]"
+            >
+              <MessageCircle className="h-4 w-4" />
+              WhatsApp
+            </a>
+            <a
+              href="https://www.linkedin.com/company/placeholder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white transition-all hover:border-[#10B981] hover:bg-[#10B981]/15 hover:text-[#6EE7B7]"
+            >
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+            </a>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white transition-all hover:border-[#10B981] hover:bg-[#10B981]/15 hover:text-[#6EE7B7] focus:outline-none">
+                <MapPin className="h-4 w-4" />
                 Nuestras Oficinas
-              </Link>
-            </li>
-          </ul>
+                <ChevronDown className="h-4 w-4 opacity-70" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start" className="w-56">
+                {officeRoutes.map((o) => (
+                  <DropdownMenuItem key={o.city} asChild>
+                    <a href={o.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer">
+                      <MapPin className="h-4 w-4 text-brand" />
+                      {o.city}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
         </div>
 
         <div>
