@@ -222,8 +222,7 @@ function Blogs() {
               >
                 {idx === 0 ? (
                 <Link
-                  to="/blog/$slug"
-                  params={{ slug: "vlog-1" }}
+                  to="/vlog-1"
                   className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
                 >
                   <BlogCardInner v={v} idx={idx} />
