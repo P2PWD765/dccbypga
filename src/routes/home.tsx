@@ -33,31 +33,31 @@ export const Route = createFileRoute("/home")({
 
 const noticias = [
   {
-    tag: "Anuncio",
-    title: "Nueva oficina en Ciudad de México",
+    tag: "Cultura",
+    title: "Capacitación Continua para Nuestro Equipo",
     excerpt:
-      "Ampliamos nuestra presencia para atender mejor a nuestros clientes corporativos.",
+      "El éxito de nuestros clientes comienza con el desarrollo de nuestra gente. Hemos implementado nuevos programas de formación estratégica y actualización constante para asegurar que nuestro equipo ofrezca soluciones con la más alta visión de negocio.",
     date: "12 Jun 2026",
   },
   {
-    tag: "Noticia",
-    title: "Reforma fiscal 2026: lo que debe saber",
+    tag: "Cultura",
+    title: "Innovación Estratégica",
     excerpt:
-      "Análisis ejecutivo de las nuevas disposiciones y su impacto en su empresa.",
+      "Impulsamos nuevas ideas y metodologías para transformar los retos de nuestros clientes en oportunidades.",
     date: "03 Jun 2026",
   },
   {
-    tag: "Evento",
-    title: "Foro de liderazgo empresarial",
+    tag: "Cultura",
+    title: "Integridad Empresarial",
     excerpt:
-      "Acompáñenos al encuentro anual de directores y socios estratégicos.",
+      "Actuamos con ética, transparencia y responsabilidad en cada decisión y relación profesional.",
     date: "28 May 2026",
   },
   {
-    tag: "Publicación",
-    title: "Reporte sectorial Q2",
+    tag: "Cultura",
+    title: "Orientación a Resultados",
     excerpt:
-      "Indicadores clave y proyecciones para los próximos seis meses.",
+      "Enfocamos cada proyecto en generar valor medible y sostenible para nuestros clientes.",
     date: "15 May 2026",
   },
 ];
@@ -137,7 +137,7 @@ function Noticias() {
               Actualidad
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
-              Noticias y Anuncios
+              Anuncios
             </h2>
           </div>
           <a className="hidden text-sm font-medium text-brand-teal hover:underline sm:inline">
@@ -147,8 +147,9 @@ function Noticias() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {noticias.map((n, i) => (
-            <article
+            <Link
               key={n.title}
+              to="/nuestra_trayectoria"
               className={`group flex flex-col rounded-2xl p-7 shadow-sm ring-1 transition-all hover:-translate-y-1 hover:shadow-xl ${
                 i % 2 === 0
                   ? "bg-white ring-black/5"
@@ -186,7 +187,7 @@ function Noticias() {
                 <span>{n.date}</span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
