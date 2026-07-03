@@ -63,7 +63,12 @@ const noticias = [
 ];
 
 const blogs = [
-  { title: "Estrategia financiera para PyMEs", duration: "12:04" },
+  {
+    title: "De la Idea al Éxito: ¿Quién te da dirección al emprender?",
+    duration: "12:04",
+    description:
+      "¿Cuántas veces has pensado en emprender y ganar el doble? El mercado no se detuvo tras la desaparición del INADEM. Descubre cómo estructurar tu idea y dar el salto definitivo con la brújula correcta.",
+  },
   { title: "Optimización fiscal 2026", duration: "08:32" },
   { title: "Transformación digital empresarial", duration: "15:21" },
   { title: "Gobierno corporativo efectivo", duration: "10:47" },
