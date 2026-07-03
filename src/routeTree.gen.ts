@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as Nuestra_trayectoriaRouteImport } from './routes/nuestra_trayectoria'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as LocationRouteImport } from './routes/location'
 import { Route as HomeRouteImport } from './routes/home'
@@ -18,6 +19,11 @@ import { Route as ConocenosHistoriaRouteImport } from './routes/conocenos.histor
 import { Route as ConocenosCulturaRouteImport } from './routes/conocenos.cultura'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const Nuestra_trayectoriaRoute = Nuestra_trayectoriaRouteImport.update({
+  id: '/nuestra_trayectoria',
+  path: '/nuestra_trayectoria',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
   path: '/nosotros',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/home': typeof HomeRoute
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
+  '/nuestra_trayectoria': typeof Nuestra_trayectoriaRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/home': typeof HomeRoute
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
+  '/nuestra_trayectoria': typeof Nuestra_trayectoriaRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/home': typeof HomeRoute
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
+  '/nuestra_trayectoria': typeof Nuestra_trayectoriaRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
   '/conocenos/historia': typeof ConocenosHistoriaRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/home'
     | '/location'
     | '/nosotros'
+    | '/nuestra_trayectoria'
     | '/blog/$slug'
     | '/conocenos/cultura'
     | '/conocenos/historia'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/home'
     | '/location'
     | '/nosotros'
+    | '/nuestra_trayectoria'
     | '/blog/$slug'
     | '/conocenos/cultura'
     | '/conocenos/historia'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/home'
     | '/location'
     | '/nosotros'
+    | '/nuestra_trayectoria'
     | '/blog/$slug'
     | '/conocenos/cultura'
     | '/conocenos/historia'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   HomeRoute: typeof HomeRoute
   LocationRoute: typeof LocationRoute
   NosotrosRoute: typeof NosotrosRoute
+  Nuestra_trayectoriaRoute: typeof Nuestra_trayectoriaRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ConocenosCulturaRoute: typeof ConocenosCulturaRoute
   ConocenosHistoriaRoute: typeof ConocenosHistoriaRoute
@@ -136,6 +149,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/nuestra_trayectoria': {
+      id: '/nuestra_trayectoria'
+      path: '/nuestra_trayectoria'
+      fullPath: '/nuestra_trayectoria'
+      preLoaderRoute: typeof Nuestra_trayectoriaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nosotros': {
       id: '/nosotros'
       path: '/nosotros'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   HomeRoute: HomeRoute,
   LocationRoute: LocationRoute,
   NosotrosRoute: NosotrosRoute,
+  Nuestra_trayectoriaRoute: Nuestra_trayectoriaRoute,
   BlogSlugRoute: BlogSlugRoute,
   ConocenosCulturaRoute: ConocenosCulturaRoute,
   ConocenosHistoriaRoute: ConocenosHistoriaRoute,
