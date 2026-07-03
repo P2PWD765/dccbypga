@@ -36,20 +36,29 @@ export const Route = createFileRoute("/nosotros")({
 const team = [
   {
     name: "David Edgardo Ruiz Enríquez",
-    role: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
+    role: "Asesor de Negocios y Especialista Fiscal",
+    contact: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
+    shortBio:
+      "Especialista en materia fiscal y negocios con más de 30 años de experiencia. Exsocio de Impuestos Internacionales en Ernst & Young y exfuncionario de Grandes Contribuyentes en el SAT. Cuenta con una sólida trayectoria en consultoría nacional e internacional y docencia de posgrado.",
+    bio: "Asesor de negocios y especialista en materia fiscal con más de 30 años de experiencia. En la iniciativa privada inició su carrera en la firma Ernst & Young, donde fue Socio en el área de Impuestos Internacionales. Posteriormente colaboró en el despacho GL como Socio Director de la Oficina Noreste de México. En ambas Firmas tuvo la oportunidad de asesorar a Empresas Nacionales e Internacionales. En el Servicio de Administración Tributaria, se desempeñó como Administrador Central de Planeación y Programación en Grandes Contribuyentes, Administrador Central de Auditoría Fiscal Internacional y también fungió como Administrador Central encargado del Programa de Cooperación Voluntaria con Grandes Contribuyentes. Asimismo, se desempeñó como Administrador y Subadministrador en la Central de Normatividad Internacional de Grandes Contribuyentes, donde integró el equipo que alcanzó los primeros acuerdos de entendimiento en México con otros países (Mutual Agreement Procedure). Ha sido miembro del Comité de Estudios Científicos de IFA México, A.C., donde fue ponente en eventos de la región de América Latina, en países como Colombia y República Dominicana, abordando temas de tributación internacional. Actualmente es miembro de la Comisión Fiscal de la Coparmex, Capítulo Querétaro. Ha sido profesor en la Maestría de Derecho Internacional de la Universidad Panamericana y de Impuestos en la Universidad La Salle. Ha participado durante varias generaciones en el módulo de Tributación Internacional del Diplomado de Impuestos Internacionales organizado por el Colegio de Contadores Públicos de Guadalajara, Jalisco. Es Contador Público egresado del Instituto Politécnico Nacional, Escuela Superior de Comercio y Administración (ESCA). Diplomado en Impuestos Internacionales impartido por el ITAM en colaboración con la Universidad de Duke.",
     photo: davidRuizAsset.url,
   },
   {
     name: "Carlos Alberto Villegas Pérez",
-    role: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
+    role: "Especialista en Fiscalización y Controversia",
+    contact: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
+    shortBio:
+      "Contador Público y Maestro en Derecho Fiscal con más de 12 años de trayectoria dual en el SAT (Grandes Contribuyentes e Hidrocarburos) y la asesoría privada. Experto en mitigación de riesgos fiscales y atención de auditorías corporativas.",
+    bio: "Especialista en materia fiscal con más de 12 años de experiencia en fiscalización y controversia, con una trayectoria que combina su experiencia tanto como autoridad y asesor, lo que le permite abordar los asuntos fiscales desde una perspectiva integral y estratégica. Inició su carrera en el SAT, dentro de las Administraciones Generales de Hidrocarburos y Grandes Contribuyentes, donde participó en el diseño e implementación de programas de fiscalización, análisis de estructuras corporativas complejas y la identificación de esquemas fiscales agresivos. Se especializa en la evaluación y mitigación de riesgos fiscales, así como en el diseño e implementación de estrategias para la atención de facultades de comprobación, atendiendo a empresas de sectores como el de hidrocarburos, construcción, industrial, alimenticio, farmacéutico, comercio y servicios, entre los clientes que se han atendido están, Traton, Navistar, Shell, Mega Gas, Construcciones ROCA, FEMSA en sus diferentes negocios, OXXO, FARMACON entre otros. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal y administrativo por la Universidad Anáhuac.",
     photo: carlosVillegasAsset.url,
   },
   {
     name: "Carlos César Hernandez",
-    role: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
-    bio: "Contador Público (ESCA) con Maestría en Derecho Fiscal (Universidad Panamericana) y más de 20 años de experiencia en asesoría fiscal nacional e internacional. Especialista en reestructuras corporativas, fusiones, escisiones, diagnósticos tributarios e inversiones patrimoniales. Ha atendido a sectores inmobiliario, comercial, minero y de salud para grandes corporativos como Grupo Televisa, Grupo Ángeles y Grupo Bal. Además, cuenta con trayectoria como expositor en cursos fiscales especializados.",
+    role: "Consultor de Impuestos Nacionales e Internacionales",
+    contact: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
+    shortBio:
+      "Especialista en consultoría fiscal, fusiones y reestructuras corporativas con más de 20 años de experiencia. Ha asesorado a importantes grupos empresariales como Televisa, Grupo Ángeles y Grupo Bal en diversos sectores comerciales e industriales.",
+    bio: "Experiencia profesional de más de 20 años en asesoría de impuestos tanto en el área nacional como internacional, en aspectos como reestructuras corporativas, fusiones, escisiones, costos fiscales, inversiones patrimoniales, diagnósticos tributarios y consultoría fiscal. Atendiendo diversos sectores de la industria como el inmobiliario, comercial, transformación, minero y salud, entre los clientes que ha atendido se mencionan Grupo Televisa, Grupo Mexicano de Desarrollo, Grupo Alfar, Grupo Ángeles, Grupo Bal, entre otros. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal por la Universidad Panamericana, ha sido expósitos en diversos cursos fiscales tanto internos de la Firma como externos para diversas instituciones.",
     photo: cesarHernandezAsset.url,
   },
 ];
