@@ -134,7 +134,7 @@ function TeamGrid() {
             Nuestro Equipo
           </h2>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((member) => (
             <Dialog key={member.name}>
               <DialogTrigger asChild>
@@ -154,17 +154,20 @@ function TeamGrid() {
                     )}
                   </div>
                   <h3 className="text-lg font-bold text-brand">{member.name}</h3>
-                  <p className="mt-1 text-sm font-medium text-brand-teal whitespace-pre-line">
+                  <p className="mt-1 text-sm font-medium text-brand-teal">
                     {member.role}
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-brand-mid">
-                    {member.bio}
+                    {member.shortBio}
                   </p>
+                  <span className="mt-6 inline-flex items-center rounded-full border border-brand-teal px-4 py-1.5 text-xs font-semibold text-brand-teal transition-colors group-hover:bg-brand-teal group-hover:text-white">
+                    Ver perfil completo
+                  </span>
                 </button>
               </DialogTrigger>
               <DialogContent className="max-w-lg">
                 <DialogHeader>
-                  <div className="mx-auto mb-4 flex h-32 w-32 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
+                  <div className="mx-auto mb-4 flex h-44 w-44 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
                     {member.photo ? (
                       <img
                         src={member.photo}
@@ -178,8 +181,11 @@ function TeamGrid() {
                   <DialogTitle className="text-center text-2xl text-brand">
                     {member.name}
                   </DialogTitle>
-                  <p className="mt-2 text-center text-sm font-medium text-brand-teal whitespace-pre-line">
+                  <p className="mt-1 text-center text-sm font-semibold text-brand-teal">
                     {member.role}
+                  </p>
+                  <p className="mt-2 text-center text-xs text-brand-mid whitespace-pre-line">
+                    {member.contact}
                   </p>
                 </DialogHeader>
                 <div className="mt-4 max-h-[50vh] overflow-y-auto px-2 text-sm leading-relaxed text-brand-mid">
