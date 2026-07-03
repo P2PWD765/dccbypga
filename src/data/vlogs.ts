@@ -51,7 +51,7 @@ export const vlogs: Record<string, Vlog> = {
       { type: "h2", text: "¿Por qué necesitas a DCC en tu esquina?" },
       {
         type: "p",
-        text: "Conocemos la radiografía del sistema. Sabemos exactamente cómo piensa la autoridad para identificar riesgos, y sabemos cómo estructuran sus defensas los grandes corporativos a nivel mundial como Shell, FEMSA, Televisa o Navistar—empresas a las que nuestros socios han asesorado y defendido.",
+        text: "Conocemos la radiografía del sistema. Sabemos exactamente cómo piensa la autoridad para identificar riesgos, y sabemos cómo estructuran sus defensas los grandes corporativos a nivel mundial como Shell, FEMSA, Televisa o Navistar, empresas a las que nuestros socios han asesorado y defendido.",
       },
       {
         type: "p",
