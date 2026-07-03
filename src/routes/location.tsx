@@ -1,13 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Mail, MessageCircle } from "lucide-react";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { offices as officeData } from "@/data/offices";
 import cdmxImg from "@/assets/city-cdmx.jpg";
 import mtyImg from "@/assets/city-mty.jpg";
 import qroImg from "@/assets/city-qro.jpg";
@@ -32,37 +33,31 @@ export const Route = createFileRoute("/location")({
   component: LocationPage,
 });
 
-const offices = [
-  {
+const meta: Record<string, { code: string; image: string; focus: string }> = {
+  cdmx: {
     code: "CDMX",
-    city: "Ciudad de México",
-    address: "Av. P.º de la Reforma s/n, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
-    phone: "TKTK",
-    email: "contacto",
     image: cdmxImg,
     focus:
       "Enfoque regulatorio y cumplimiento: Al ser el epicentro financiero y corporativo, la prioridad está en el cumplimiento regulatorio ante instituciones como la Comisión Nacional Bancaria y de Valores (CNBV) y el Banco de México. Servicios corporativos: Fuerte demanda en fusiones y adquisiciones, reestructuración de pasivos y consultoría forense.",
   },
-  {
+  queretaro: {
     code: "QRTO",
-    city: "Querétaro",
-    address: "Avenida 5 de Febrero 99, Esq, Acceso Carretera Celaya Cuota, Los Virreyes, 76175 Santiago de Querétaro, Qro.",
-    phone: "TKTK",
-    email: "contacto",
     image: qroImg,
     focus:
       "Expansión y Nearshoring: Las estrategias financieras se centran en el desarrollo de modelos de negocio para el crecimiento de PyMEs, expansión de franquicias y gestión de suministros. Levantamiento de capital: Asesoría dirigida a la optimización del flujo de efectivo y obtención de créditos bancarios.",
   },
-  {
+  monterrey: {
     code: "MTY",
-    city: "Monterrey",
-    address: "Dr. Roberto J. Cantú 2777, Ampliación Comercial Doctores, 64710 Monterrey, N.L.",
-    phone: "TKTK",
-    email: "contacto",
     image: mtyImg,
     focus:
       "Finanzas corporativas: En el hub industrial del norte, los servicios giran en torno a la optimización del capital para proyectos a gran escala y comercio internacional. Visión estructurada: Existen firmas enfocadas en la gobernabilidad, el riesgo empresarial y el escalamiento de la rentabilidad.",
   },
+};
+
+const offices = [
+  { ...officeData.find((o) => o.id === "cdmx")!, ...meta.cdmx },
+  { ...officeData.find((o) => o.id === "queretaro")!, ...meta.queretaro },
+  { ...officeData.find((o) => o.id === "monterrey")!, ...meta.monterrey },
 ];
 
 function LocationPage() {
@@ -110,20 +105,39 @@ function LocationPage() {
                   </h2>
                 </div>
               </div>
-              <dl className="mt-2 space-y-3 text-sm" style={{ color: "#344E41" }}>
-                <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#344E41" }} />
-                  <dd>{o.address}</dd>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#344E41" }} />
-                  <dd>{o.phone}</dd>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#344E41" }} />
-                  <dd>{o.email}</dd>
-                </div>
-              </dl>
+              <p className="mt-2 text-sm leading-relaxed" style={{ color: "#344E41" }}>
+                {o.address}
+              </p>
+              <div className="mt-5 flex flex-col gap-2">
+                <a
+                  href={o.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white transition-colors hover:opacity-90"
+                  style={{ backgroundColor: "#344E41" }}
+                >
+                  <MapPin className="h-4 w-4" />
+                  Ver ubicación
+                </a>
+                <a
+                  href={o.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white transition-colors hover:opacity-90"
+                  style={{ backgroundColor: "#344E41" }}
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  Contactar
+                </a>
+                <a
+                  href={`mailto:${o.email}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold text-white transition-colors hover:opacity-90"
+                  style={{ backgroundColor: "#344E41" }}
+                >
+                  <Mail className="h-4 w-4" />
+                  Enviar correo
+                </a>
+              </div>
               <Accordion type="single" collapsible className="mt-6">
                 <AccordionItem value="focus" className="border-t border-[#344E41]/30">
                   <AccordionTrigger
