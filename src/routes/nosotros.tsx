@@ -3,6 +3,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { User } from "lucide-react";
 import davidRuizAsset from "@/assets/david-ruiz.png.asset.json";
+import carlosVillegasAsset from "@/assets/carlos-villegas.png.asset.json";
+import cesarHernandezAsset from "@/assets/cesar-hernandez.png.asset.json";
 import {
   Dialog,
   DialogContent,
@@ -42,13 +44,13 @@ const team = [
     name: "Carlos Alberto Villegas Pérez",
     role: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
-    photo: null,
+    photo: carlosVillegasAsset.url,
   },
   {
     name: "César Hernandez",
     role: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum nulla sed consectetur malesuada. Maecenas scelerisque erat quis maximus sagittis.",
-    photo: null,
+    photo: cesarHernandezAsset.url,
   },
 ];
 
