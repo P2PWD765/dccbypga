@@ -36,7 +36,7 @@ const offices = [
   {
     code: "CDMX",
     city: "Ciudad de México",
-    address: "TKTK",
+    address: "Av. P.º de la Reforma s/n, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
     phone: "TKTK",
     email: "contacto",
     image: cdmxImg,
@@ -46,7 +46,7 @@ const offices = [
   {
     code: "QRTO",
     city: "Querétaro",
-    address: "TKTK",
+    address: "Avenida 5 de Febrero 99, Esq, Acceso Carretera Celaya Cuota, Los Virreyes, 76175 Santiago de Querétaro, Qro.",
     phone: "TKTK",
     email: "contacto",
     image: qroImg,
@@ -56,7 +56,7 @@ const offices = [
   {
     code: "MTY",
     city: "Monterrey",
-    address: "TKTK",
+    address: "Dr. Roberto J. Cantú 2777, Ampliación Comercial Doctores, 64710 Monterrey, N.L.",
     phone: "TKTK",
     email: "contacto",
     image: mtyImg,
