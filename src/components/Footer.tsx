@@ -10,15 +10,15 @@ import {
 const officeRoutes = [
   {
     city: "Monterrey",
-    url: "https://www.google.com/maps/dir/?api=1&destination=Dr.+Roberto+J.+Cant%C3%BA+2777,+Ampliaci%C3%B3n+Comercial+Doctores,+64710+Monterrey,+N.L.",
+    url: "https://www.google.com/maps/search/Dr.+Roberto+J.+Cant%C3%BA+2777,+Ampliaci%C3%B3n+Comercial+Doctores,+64710+Monterrey,+N.L.?entry=gmail&source=g",
   },
   {
     city: "Ciudad de México",
-    url: "https://www.google.com/maps/dir/?api=1&destination=Paseo+de+la+Reforma+250,+Juárez,+06600+Ciudad+de+México,+CDMX",
+    url: "https://www.google.com/maps/search/Paseo+de+la+Reforma+250,+Juárez,+06600+Ciudad+de+México,+CDMX",
   },
   {
     city: "Querétaro",
-    url: "https://www.google.com/maps/dir/?api=1&destination=Blvd.+Bernardo+Quintana,+Centro+Sur,+76090+Santiago+de+Querétaro,+Qro.",
+    url: "https://www.google.com/maps/search/Blvd.+Bernardo+Quintana,+Centro+Sur,+76090+Santiago+de+Querétaro,+Qro.",
   },
 ];
 
