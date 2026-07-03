@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Vlog1RouteImport } from './routes/vlog-1'
+import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as Nuestra_trayectoriaRouteImport } from './routes/nuestra_trayectoria'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as LocationRouteImport } from './routes/location'
@@ -23,6 +24,11 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 const Vlog1Route = Vlog1RouteImport.update({
   id: '/vlog-1',
   path: '/vlog-1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiciosRoute = ServiciosRouteImport.update({
+  id: '/servicios',
+  path: '/servicios',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Nuestra_trayectoriaRoute = Nuestra_trayectoriaRouteImport.update({
@@ -78,6 +84,7 @@ export interface FileRoutesByFullPath {
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
   '/nuestra_trayectoria': typeof Nuestra_trayectoriaRoute
+  '/servicios': typeof ServiciosRoute
   '/vlog-1': typeof Vlog1Route
   '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
@@ -90,6 +97,7 @@ export interface FileRoutesByTo {
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
   '/nuestra_trayectoria': typeof Nuestra_trayectoriaRoute
+  '/servicios': typeof ServiciosRoute
   '/vlog-1': typeof Vlog1Route
   '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
@@ -103,6 +111,7 @@ export interface FileRoutesById {
   '/location': typeof LocationRoute
   '/nosotros': typeof NosotrosRoute
   '/nuestra_trayectoria': typeof Nuestra_trayectoriaRoute
+  '/servicios': typeof ServiciosRoute
   '/vlog-1': typeof Vlog1Route
   '/blog/$slug': typeof BlogSlugRoute
   '/conocenos/cultura': typeof ConocenosCulturaRoute
@@ -117,6 +126,7 @@ export interface FileRouteTypes {
     | '/location'
     | '/nosotros'
     | '/nuestra_trayectoria'
+    | '/servicios'
     | '/vlog-1'
     | '/blog/$slug'
     | '/conocenos/cultura'
@@ -129,6 +139,7 @@ export interface FileRouteTypes {
     | '/location'
     | '/nosotros'
     | '/nuestra_trayectoria'
+    | '/servicios'
     | '/vlog-1'
     | '/blog/$slug'
     | '/conocenos/cultura'
@@ -141,6 +152,7 @@ export interface FileRouteTypes {
     | '/location'
     | '/nosotros'
     | '/nuestra_trayectoria'
+    | '/servicios'
     | '/vlog-1'
     | '/blog/$slug'
     | '/conocenos/cultura'
@@ -154,6 +166,7 @@ export interface RootRouteChildren {
   LocationRoute: typeof LocationRoute
   NosotrosRoute: typeof NosotrosRoute
   Nuestra_trayectoriaRoute: typeof Nuestra_trayectoriaRoute
+  ServiciosRoute: typeof ServiciosRoute
   Vlog1Route: typeof Vlog1Route
   BlogSlugRoute: typeof BlogSlugRoute
   ConocenosCulturaRoute: typeof ConocenosCulturaRoute
@@ -167,6 +180,13 @@ declare module '@tanstack/react-router' {
       path: '/vlog-1'
       fullPath: '/vlog-1'
       preLoaderRoute: typeof Vlog1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servicios': {
+      id: '/servicios'
+      path: '/servicios'
+      fullPath: '/servicios'
+      preLoaderRoute: typeof ServiciosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/nuestra_trayectoria': {
@@ -242,6 +262,7 @@ const rootRouteChildren: RootRouteChildren = {
   LocationRoute: LocationRoute,
   NosotrosRoute: NosotrosRoute,
   Nuestra_trayectoriaRoute: Nuestra_trayectoriaRoute,
+  ServiciosRoute: ServiciosRoute,
   Vlog1Route: Vlog1Route,
   BlogSlugRoute: BlogSlugRoute,
   ConocenosCulturaRoute: ConocenosCulturaRoute,
@@ -250,13 +271,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
