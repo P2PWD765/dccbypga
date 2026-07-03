@@ -15,11 +15,11 @@ const officeRoutes = [
   },
   {
     city: "Ciudad de México",
-    url: "https://www.google.com/maps/search/Paseo+de+la+Reforma+250,+Juárez,+06600+Ciudad+de+México,+CDMX",
+    url: "https://www.google.com/maps/search/Av.+P.%C2%BAo+de+la+Reforma+s%2Fn,+Ju%C3%A1rez,+Cuauht%C3%A9moc,+06600+Ciudad+de+M%C3%A9xico,+CDMX",
   },
   {
     city: "Querétaro",
-    url: "https://www.google.com/maps/search/Blvd.+Bernardo+Quintana,+Centro+Sur,+76090+Santiago+de+Querétaro,+Qro.",
+    url: "https://www.google.com/maps/search/Avenida+5+de+Febrero+99,+Esq,+Acceso+Carretera+Celaya+Cuota,+Los+Virreyes,+76175+Santiago+de+Quer%C3%A9taro,+Qro.",
   },
 ];
 
