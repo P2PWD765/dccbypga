@@ -248,7 +248,7 @@ function BlogCardInner({
   v,
   idx,
 }: {
-  v: { title: string; duration: string };
+  v: { title: string; duration: string; description?: string };
   idx: number;
 }) {
   return (
@@ -275,9 +275,20 @@ function BlogCardInner({
                     <h3 className="text-base font-semibold text-brand">
                       {v.title}
                     </h3>
-                    <p className="mt-2 text-sm text-slate-500">
-                      DCC Insights · Episodio {idx + 1}
-                    </p>
+                    {v.description ? (
+                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                        {v.description}
+                      </p>
+                    ) : (
+                      <p className="mt-2 text-sm text-slate-500">
+                        DCC Insights · Episodio {idx + 1}
+                      </p>
+                    )}
+                    {idx === 0 && (
+                      <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2 text-xs font-medium text-white transition-colors group-hover:bg-brand-teal">
+                        Ver Vlog <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    )}
                   </div>
     </>
   );
