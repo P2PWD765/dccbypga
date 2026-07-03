@@ -17,18 +17,77 @@ export const Route = createFileRoute("/blog/$slug")({
   component: BlogDetail,
 });
 
+type Block =
+  | { type: "p"; text: string }
+  | { type: "h2"; text: string }
+  | { type: "h3"; text: string }
+  | { type: "ul"; items: string[] };
+
 const posts: Record<
   string,
-  { title: string; date: string; duration: string; body: string[] }
+  { title: string; date: string; duration: string; body: Block[] }
 > = {
   "vlog-1": {
-    title: "Estrategia financiera para PyMEs",
+    title: "De la Idea al Éxito: ¿Quién te da dirección cuando emprendes en México?",
     date: "24 de junio, 2026",
     duration: "12:04",
     body: [
-      "En un entorno económico marcado por la volatilidad, las pequeñas y medianas empresas requieren una brújula financiera que traduzca la estrategia en decisiones concretas. En este episodio conversamos sobre cómo construir un tablero financiero simple, útil y accionable para la dirección general.",
-      "Abordamos tres pilares fundamentales: la disciplina en la administración del flujo de efectivo, la estructura de capital adecuada al ciclo del negocio y la lectura oportuna de los indicadores de rentabilidad. Cada uno de estos elementos, cuando se integran correctamente, permite anticipar riesgos y aprovechar oportunidades de crecimiento con mayor claridad.",
-      "Cerramos con una serie de recomendaciones prácticas para directores y socios que buscan profesionalizar su gestión financiera sin perder la agilidad que caracteriza a las empresas en expansión.",
+      {
+        type: "p",
+        text: '¿Cuántas veces has estado en tu oficina, frente a la computadora, pensando: "yo podría hacer esto por mi cuenta y ganar el doble"? Todos hemos tenido esa gran idea dándonos vueltas en la cabeza. Pero, ¿por qué la mayoría no da el salto definitivo?',
+      },
+      {
+        type: "p",
+        text: "Casi nunca es por falta de ganas o talento. Lo que detiene a muchos profesionales de convertirse en dueños de su propio negocio es la falta de algo fundamental: dirección y estructura.",
+      },
+      { type: "h2", text: "La brújula que teníamos: El INADEM y el Fondo PYME" },
+      {
+        type: "p",
+        text: "Hace algunos años, la ruta para emprender en México estaba, hasta cierto punto, trazada por el gobierno. Existía el INADEM (creado en 2013), que vino a fortalecer lo que desde 2004 conocíamos como el Fondo PYME.",
+      },
+      {
+        type: "p",
+        text: 'El INADEM no solo repartía subsidios; literalmente te daba una brújula. Llegó a apoyar a más de 4.4 millones de emprendedores. Básicamente, existía un ente que te decía: "Aquí tienes un empujón y hacia allá debes caminar". Sin embargo, en 2019 desapareció, dejando a muchos con la idea en la mano, pero sin el mapa para ejecutarla.',
+      },
+      { type: "h2", text: "El mercado no se detuvo (y tú tampoco deberías)" },
+      {
+        type: "p",
+        text: "¿Significa esto que el emprendimiento en México se apagó? ¡Para nada! El ecosistema está más vivo que nunca:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Las MiPymes representan más del 99% de las empresas en el país.",
+          "Generan el 52% de los ingresos a nivel nacional.",
+          "Son responsables de dar empleo a casi el 70% de la fuerza laboral mexicana.",
+        ],
+      },
+      {
+        type: "p",
+        text: 'El riesgo hoy es que, al no tener un "organismo guía", muchos emprendedores se lanzan al vacío sin una estrategia financiera sólida y sin estructura operativa.',
+      },
+      { type: "h2", text: "Tu nueva brújula: Estructura real para negocios reales" },
+      {
+        type: "p",
+        text: "Antes podías depender de un fondo gubernamental. Hoy, esa guía tiene que venir de especialistas que entiendan el pulso del mercado real. Así como el INADEM estructuraba proyectos, hoy en DCC Asesores Empresariales tomamos esa estafeta.",
+      },
+      {
+        type: "p",
+        text: "No somos un subsidio; somos tus aliados estratégicos. Nuestro objetivo es ayudarte a:",
+      },
+      {
+        type: "ul",
+        items: [
+          "Aterrizar esa idea que tienes en tu escritorio.",
+          "Estructurarla financieramente para que sea viable.",
+          "Optimizar tu inversión y mitigar los riesgos.",
+          "Crear un plan de crecimiento atractivo y escalable.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Si estás listo para dejar de ser empleado y construir tu propio camino, no lo hagas a ciegas. Contáctanos hoy mismo y hagamos que tu idea sea el próximo gran caso de éxito en México.",
+      },
     ],
   },
 };
@@ -40,7 +99,7 @@ function BlogDetail() {
       title: "Vlog",
       date: "2026",
       duration: "00:00",
-      body: ["Contenido próximamente."],
+      body: [{ type: "p", text: "Contenido próximamente." }],
     };
 
   return (
@@ -81,9 +140,38 @@ function BlogDetail() {
           <p className="mt-5 text-sm text-slate-500">{post.date}</p>
 
           <div className="mt-10 space-y-6 text-lg leading-relaxed text-slate-700">
-            {post.body.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+            {post.body.map((block, i) => {
+              if (block.type === "h2")
+                return (
+                  <h2
+                    key={i}
+                    className="pt-4 text-2xl font-semibold tracking-tight text-brand sm:text-3xl"
+                  >
+                    {block.text}
+                  </h2>
+                );
+              if (block.type === "h3")
+                return (
+                  <h3
+                    key={i}
+                    className="pt-2 text-xl font-semibold tracking-tight text-brand"
+                  >
+                    {block.text}
+                  </h3>
+                );
+              if (block.type === "ul")
+                return (
+                  <ul
+                    key={i}
+                    className="list-disc space-y-2 pl-6 marker:text-brand-teal"
+                  >
+                    {block.items.map((it, j) => (
+                      <li key={j}>{it}</li>
+                    ))}
+                  </ul>
+                );
+              return <p key={i}>{block.text}</p>;
+            })}
           </div>
         </div>
       </article>
