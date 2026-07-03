@@ -8,13 +8,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/dcc-logo.png";
 
-const industrias = [
-  "Controversia",
-  "Asesoría",
-  "Cumplimento y Devoluciones",
-  "Otros servicios",
-];
-
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-brand text-white shadow-md">
@@ -29,16 +22,13 @@ export function Navbar() {
         </Link>
 
         <nav className="flex items-center gap-1 sm:gap-2">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 focus:outline-none">
-              Servicios <ChevronDown className="h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-56">
-              {industrias.map((i) => (
-                <DropdownMenuItem key={i}>{i}</DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Link
+            to="/servicios"
+            className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10"
+            activeProps={{ className: "bg-white/15" }}
+          >
+            Servicios
+          </Link>
 
           <Link
             to="/nosotros"
