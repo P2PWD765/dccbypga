@@ -36,26 +36,31 @@ const servicios = [
     title: "Asesoría",
     description:
       "Te brindamos tranquilidad a través de soluciones efectuadas a la medida en un marco legal en la aplicación de las disposiciones fiscales considerando las necesidades particulares, con un enfoque principal en el cuidado del patrimonio de nuestros clientes.",
+    email: "asesoria@dcc-asesores.com",
   },
   {
     title: "Cumplimiento y Devoluciones",
     description:
       "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
+    email: "cumplimiento@dcc-asesores.com",
   },
   {
     title: "Controversia",
     description:
       "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
+    email: "controversia@dcc-asesores.com",
   },
   {
     title: "Enfoque Holístico",
     description:
       "La experiencia de nuestra Firma, permite tener un enfoque holístico, que conlleva a un servicio integral, basado en el entendimiento del modelo de negocio de cada uno de nuestros clientes.",
+    email: "consultoria@dcc-asesores.com",
   },
   {
     title: "Otros Servicios",
     description:
       "Precios de Transferencia, apoyamos en la correcta determinación del valor justo de mercado, así como asesoramos en la aplicación de las normas aplicables en esta materia. Tax Technology implementamos herramientas tecnológicas que facilitan y aseguran el manejo de tu información fiscal, legal, etc, para un debido cumplimiento.",
+    email: "servicios@dcc-asesores.com",
   },
 ];
 
@@ -91,8 +96,14 @@ function ServiciosPage() {
                   </CardDescription>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" className="w-full">
-                    Más información
+                  <Button asChild variant="outline" className="w-full">
+                    <a
+                      href={`mailto:${s.email}?subject=${encodeURIComponent(
+                        `Consulta sobre ${s.title} — DCC Asesores`,
+                      )}`}
+                    >
+                      Contáctanos
+                    </a>
                   </Button>
                 </CardFooter>
               </Card>
