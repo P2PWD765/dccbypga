@@ -2,48 +2,51 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Play } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { vlogs, type VlogBlock } from "@/data/vlogs";
+import { vlogs } from "@/data/vlogs";
 
-export const Route = createFileRoute("/blog/$slug")({
-  head: ({ params }) => ({
+export const Route = createFileRoute("/vlog-1")({
+  head: () => ({
     meta: [
-      { title: `Vlog ${params.slug} — DCC Asesores` },
+      {
+        title:
+          "De la Idea al Éxito: ¿Quién te da dirección al emprender? — DCC Asesores",
+      },
       {
         name: "description",
         content:
-          "Análisis editorial de DCC Asesores sobre estrategia, finanzas y crecimiento empresarial.",
+          "Descubre cómo estructurar tu idea de negocio en México tras la desaparición del INADEM, con la guía estratégica de DCC Asesores.",
+      },
+      {
+        property: "og:title",
+        content: "De la Idea al Éxito — DCC Asesores",
+      },
+      {
+        property: "og:description",
+        content:
+          "Estrategia y estructura para emprendedores mexicanos que buscan dar el salto definitivo.",
       },
     ],
   }),
-  component: BlogDetail,
+  component: Vlog1Page,
 });
 
-function BlogDetail() {
-  const { slug } = Route.useParams();
-  const post =
-    vlogs[slug] ?? {
-      title: "Vlog",
-      date: "2026",
-      duration: "00:00",
-      body: [{ type: "p", text: "Contenido próximamente." } as VlogBlock],
-    };
+function Vlog1Page() {
+  const post = vlogs["vlog-1"];
 
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       <article className="mx-auto max-w-5xl px-6 py-16">
         <Link
-          to="/blogs"
+          to="/home"
           className="mb-10 inline-flex items-center gap-2 rounded-full border border-brand/20 px-5 py-2 text-sm font-medium text-brand transition-colors hover:bg-brand hover:text-white"
         >
-          <ArrowLeft className="h-4 w-4" /> Regresar a Blogs
+          <ArrowLeft className="h-4 w-4" /> Regresar
         </Link>
 
         <div
           className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl shadow-xl ring-1 ring-black/5"
-          style={{
-            background: "linear-gradient(135deg,#064E3B,#065F46)",
-          }}
+          style={{ background: "linear-gradient(135deg,#064E3B,#065F46)" }}
         >
           <button
             aria-label="Reproducir video"

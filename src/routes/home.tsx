@@ -63,7 +63,12 @@ const noticias = [
 ];
 
 const blogs = [
-  { title: "Estrategia financiera para PyMEs", duration: "12:04" },
+  {
+    title: "De la Idea al Éxito: ¿Quién te da dirección al emprender?",
+    duration: "12:04",
+    description:
+      "¿Cuántas veces has pensado en emprender y ganar el doble? El mercado no se detuvo tras la desaparición del INADEM. Descubre cómo estructurar tu idea y dar el salto definitivo con la brújula correcta.",
+  },
   { title: "Optimización fiscal 2026", duration: "08:32" },
   { title: "Transformación digital empresarial", duration: "15:21" },
   { title: "Gobierno corporativo efectivo", duration: "10:47" },
@@ -217,8 +222,7 @@ function Blogs() {
               >
                 {idx === 0 ? (
                 <Link
-                  to="/blog/$slug"
-                  params={{ slug: "vlog-1" }}
+                  to="/vlog-1"
                   className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
                 >
                   <BlogCardInner v={v} idx={idx} />
@@ -243,7 +247,7 @@ function BlogCardInner({
   v,
   idx,
 }: {
-  v: { title: string; duration: string };
+  v: { title: string; duration: string; description?: string };
   idx: number;
 }) {
   return (
@@ -270,9 +274,20 @@ function BlogCardInner({
                     <h3 className="text-base font-semibold text-brand">
                       {v.title}
                     </h3>
-                    <p className="mt-2 text-sm text-slate-500">
-                      DCC Insights · Episodio {idx + 1}
-                    </p>
+                    {v.description ? (
+                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                        {v.description}
+                      </p>
+                    ) : (
+                      <p className="mt-2 text-sm text-slate-500">
+                        DCC Insights · Episodio {idx + 1}
+                      </p>
+                    )}
+                    {idx === 0 && (
+                      <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2 text-xs font-medium text-white transition-colors group-hover:bg-brand-teal">
+                        Ver Vlog <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    )}
                   </div>
     </>
   );
