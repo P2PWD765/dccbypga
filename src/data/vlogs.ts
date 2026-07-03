@@ -14,65 +14,69 @@ export type Vlog = {
 export const vlogs: Record<string, Vlog> = {
   "vlog-1": {
     title:
-      "De la Idea al Éxito: ¿Quién te da dirección cuando emprendes en México?",
+      "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego",
     date: "24 de junio, 2026",
     duration: "12:04",
     body: [
+      { type: "h2", text: "El momento histórico de México" },
       {
         type: "p",
-        text: '¿Cuántas veces has estado en tu oficina, frente a la computadora, pensando: "yo podría hacer esto por mi cuenta y ganar el doble"? Todos hemos tenido esa gran idea dándonos vueltas en la cabeza. Pero, ¿por qué la mayoría no da el salto definitivo?',
+        text: "Abre cualquier periódico o portal de finanzas y la palabra es la misma: Nearshoring. México está atravesando un momento histórico. La inversión extranjera directa está rompiendo récords, las cadenas de suministro globales se están reubicando en nuestro país y las oportunidades de negocio están explotando en sectores como la manufactura, el comercio, la construcción y los servicios.",
       },
       {
         type: "p",
-        text: "Casi nunca es por falta de ganas o talento. Lo que detiene a muchos profesionales de convertirse en dueños de su propio negocio es la falta de algo fundamental: dirección y estructura.",
-      },
-      { type: "h2", text: "La brújula que teníamos: El INADEM y el Fondo PYME" },
-      {
-        type: "p",
-        text: "Hace algunos años, la ruta para emprender en México estaba, hasta cierto punto, trazada por el gobierno. Existía el INADEM (creado en 2013), que vino a fortalecer lo que desde 2004 conocíamos como el Fondo PYME.",
+        text: "Es la era dorada para hacer negocios, ¿cierto? Sí, pero hay una trampa que nadie te cuenta.",
       },
       {
         type: "p",
-        text: 'El INADEM no solo repartía subsidios; literalmente te daba una brújula. Llegó a apoyar a más de 4.4 millones de emprendedores. Básicamente, existía un ente que te decía: "Aquí tienes un empujón y hacia allá debes caminar". Sin embargo, en 2019 desapareció, dejando a muchos con la idea en la mano, pero sin el mapa para ejecutarla.',
+        text: "Mientras esta ola económica levanta a muchos, la fiscalización en México también ha pisado el acelerador. El SAT es más riguroso, tecnológico y agresivo que nunca. Hoy, crecer un negocio o emprender a gran escala no se trata solo de vender más; se trata de saber estructurarte corporativamente para no ahogarte en un mar de contingencias fiscales y legales.",
       },
-      { type: "h2", text: "El mercado no se detuvo (y tú tampoco deberías)" },
+      { type: "h2", text: "El secreto de los gigantes" },
       {
         type: "p",
-        text: "¿Significa esto que el emprendimiento en México se apagó? ¡Para nada! El ecosistema está más vivo que nunca:",
+        text: "¿Cómo le hacen los corporativos gigantes para navegar este entorno, optimizar sus inversiones y salir victoriosos en auditorías complejas? Tienen un secreto: no contratan a un contador tradicional; se alían con estrategas que conocen las reglas desde adentro.",
+      },
+      {
+        type: "p",
+        text: "Ahí es exactamente donde entra el valor de DCC Asesores Empresariales.",
+      },
+      {
+        type: "p",
+        text: 'Nosotros no solo leemos la ley, nosotros hemos estado en los dos lados de la mesa. Nuestro equipo directivo cuenta con más de 30 años de experiencia que respaldan nuestra visión. No somos teóricos; venimos de las "Big 4" como Ernst & Young, manejando impuestos internacionales y reestructuras corporativas.',
+      },
+      {
+        type: "p",
+        text: "Pero nuestra verdadera ventaja competitiva, la que ponemos a tu disposición, es nuestra trayectoria dentro de la autoridad. Formamos parte de las Administraciones Generales de Grandes Contribuyentes, Hidrocarburos y Normatividad Internacional del SAT. Literalmente, participamos en el diseño e implementación de los programas de fiscalización a los que hoy se enfrentan las empresas. Fuimos la autoridad que alcanzó los primeros acuerdos de entendimiento internacional en México.",
+      },
+      { type: "h2", text: "¿Por qué necesitas a DCC en tu esquina?" },
+      {
+        type: "p",
+        text: "Conocemos la radiografía del sistema. Sabemos exactamente cómo piensa la autoridad para identificar riesgos, y sabemos cómo estructuran sus defensas los grandes corporativos a nivel mundial como Shell, FEMSA, Televisa o Navistar—empresas a las que nuestros socios han asesorado y defendido.",
+      },
+      {
+        type: "p",
+        text: "Tener a DCC como tu firma asesora significa que tu empresa, sin importar si está en fase de crecimiento o si ya es una corporación consolidada, tendrá acceso a estrategias de nivel internacional.",
+      },
+      {
+        type: "p",
+        text: "Te damos dirección integral para:",
       },
       {
         type: "ul",
         items: [
-          "Las MiPymes representan más del 99% de las empresas en el país.",
-          "Generan el 52% de los ingresos a nivel nacional.",
-          "Son responsables de dar empleo a casi el 70% de la fuerza laboral mexicana.",
+          "Blindar tu empresa: Evaluamos y mitigamos riesgos antes de que la autoridad toque a tu puerta.",
+          "Estructurar para crecer: Te guiamos en fusiones, escisiones y optimización de costos fiscales para que aproveches el boom económico sin frenos legales.",
+          "Defender tu patrimonio: Diseñamos estrategias de atención ante facultades de comprobación con la precisión de quien conoce el manual del auditor.",
         ],
       },
+      { type: "h2", text: "El siguiente paso" },
       {
         type: "p",
-        text: 'El riesgo hoy es que, al no tener un "organismo guía", muchos emprendedores se lanzan al vacío sin una estrategia financiera sólida y sin estructura operativa.',
-      },
-      { type: "h2", text: "Tu nueva brújula: Estructura real para negocios reales" },
-      {
-        type: "p",
-        text: "Antes podías depender de un fondo gubernamental. Hoy, esa guía tiene que venir de especialistas que entiendan el pulso del mercado real. Así como el INADEM estructuraba proyectos, hoy en DCC Asesores Empresariales tomamos esa estafeta.",
+        text: "Aprovechar el crecimiento económico de México requiere más que una buena idea; requiere una estructura blindada. No dejes el futuro de tu patrimonio a la suerte ni a estrategias obsoletas.",
       },
       {
         type: "p",
-        text: "No somos un subsidio; somos tus aliados estratégicos. Nuestro objetivo es ayudarte a:",
-      },
-      {
-        type: "ul",
-        items: [
-          "Aterrizar esa idea que tienes en tu escritorio.",
-          "Estructurarla financieramente para que sea viable.",
-          "Optimizar tu inversión y mitigar los riesgos.",
-          "Crear un plan de crecimiento atractivo y escalable.",
-        ],
-      },
-      {
-        type: "p",
-        text: "Si estás listo para dejar de ser empleado y construir tu propio camino, no lo hagas a ciegas. Contáctanos hoy mismo y hagamos que tu idea sea el próximo gran caso de éxito en México.",
+        text: "Si quieres jugar en las grandes ligas, necesitas en tu esquina a los que conocen el juego desde adentro. Acércate a DCC Asesores Empresariales y construyamos la ruta más sólida y rentable para tu negocio.",
       },
     ],
   },
