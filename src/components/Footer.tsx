@@ -2,11 +2,10 @@ import { Link } from "@tanstack/react-router";
 import { MapPin, MessageCircle, Linkedin, ChevronDown } from "lucide-react";
 import logo from "@/assets/dcc-logo.png";
 import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "@/components/ui/dropdown-menu";
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 
 const officeRoutes = [
   {
@@ -60,23 +59,29 @@ export function Footer() {
               <Linkedin className="h-4 w-4" />
               LinkedIn
             </a>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white transition-all hover:border-[#10B981] hover:bg-[#10B981]/15 hover:text-[#6EE7B7] focus:outline-none">
+            <Popover>
+              <PopoverTrigger className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-4 py-2.5 text-sm font-medium text-white transition-all hover:border-[#10B981] hover:bg-[#10B981]/15 hover:text-[#6EE7B7] focus:outline-none">
                 <MapPin className="h-4 w-4" />
                 Nuestras Oficinas
                 <ChevronDown className="h-4 w-4 opacity-70" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-56">
-                {officeRoutes.map((o) => (
-                  <DropdownMenuItem key={o.city} asChild>
-                    <a href={o.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer">
+              </PopoverTrigger>
+              <PopoverContent align="start" className="w-56 p-1">
+                <div className="flex flex-col">
+                  {officeRoutes.map((o) => (
+                    <a
+                      key={o.city}
+                      href={o.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 rounded-sm px-2 py-2 text-sm text-popover-foreground hover:bg-accent hover:text-accent-foreground"
+                    >
                       <MapPin className="h-4 w-4 text-brand" />
                       {o.city}
                     </a>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  ))}
+                </div>
+              </PopoverContent>
+            </Popover>
           </div>
         </div>
 
