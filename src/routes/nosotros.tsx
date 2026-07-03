@@ -49,7 +49,7 @@ const team = [
   {
     name: "Carlos César Hernandez",
     role: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
-    bio: "Experiencia profesional de más de 20 años en asesoría de impuestos tanto en el área nacional como internacional, en aspectos como reestructuras corporativas, fusiones, escisiones, costos fiscales, inversiones patrimoniales, diagnósticos tributarios y consultoría fiscal. Atendiendo diversos sectores de la industria como el inmobiliario, comercial, transformación, minero y salud, entre los clientes que ha atendido se mencionan Grupo Televisa, Grupo Mexicano de Desarrollo, Grupo Alfar, Grupo Ángeles, Grupo Bal, entre otros. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal por la Universidad Panamericana, ha sido expósitos en diversos cursos fiscales tanto internos de la Firma como externos para diversas instituciones.",
+    bio: "Contador Público (ESCA) con Maestría en Derecho Fiscal (Universidad Panamericana) y más de 20 años de experiencia en asesoría fiscal nacional e internacional. Especialista en reestructuras corporativas, fusiones, escisiones, diagnósticos tributarios e inversiones patrimoniales. Ha atendido a sectores inmobiliario, comercial, minero y de salud para grandes corporativos como Grupo Televisa, Grupo Ángeles y Grupo Bal. Además, cuenta con trayectoria como expositor en cursos fiscales especializados.",
     photo: cesarHernandezAsset.url,
   },
 ];
