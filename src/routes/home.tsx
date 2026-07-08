@@ -86,9 +86,11 @@ function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <Hero />
-      <Noticias />
-      <Blogs />
+      <main>
+        <Hero />
+        <Noticias />
+        <Blogs />
+      </main>
       <Footer />
     </div>
   );
