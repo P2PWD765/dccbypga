@@ -1,13 +1,16 @@
+import { vlogs, type VlogBlock } from "@/data/vlogs";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Play } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { vlogs, type VlogBlock } from "@/data/vlogs";
-
 export const Route = createFileRoute("/blog/$slug")({
   head: ({ params }) => ({
     meta: [
-      { title: `Vlog ${params.slug} — DCC Asesores` },
+      {
+        title: vlogs[params.slug]
+          ? `${vlogs[params.slug].title} — DCC Asesores`
+          : `Vlog ${params.slug} — DCC Asesores`,
+      },
       {
         name: "description",
         content:
