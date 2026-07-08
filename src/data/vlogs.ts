@@ -142,7 +142,7 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Pero también hay más competencia, más regulación y una autoridad fiscal más rigurosa. Crecer un negocio ya no se trata solo de vender más — se trata de estructurarte con inteligencia para no ahogarte en contingencias fiscales, legales y financieras.",
+        text: "Pero también hay más competencia, más regulación y una autoridad fiscal más rigurosa. Crecer un negocio ya no se trata solo de vender más se trata de estructurarte con inteligencia para no ahogarte en contingencias fiscales, legales y financieras.",
       },
       {
         type: "p",
