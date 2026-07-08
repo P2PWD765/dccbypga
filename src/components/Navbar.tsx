@@ -56,7 +56,11 @@ export function Navbar() {
                   Nuestra cultura organizacional
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>Nuestra trayectoria</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link to="/nuestra_trayectoria" className="cursor-pointer">
+                  Nuestra trayectoria
+                </Link>
+              </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link to="/location" className="cursor-pointer">
                   Ubicación
