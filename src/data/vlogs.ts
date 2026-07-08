@@ -166,8 +166,8 @@ export const vlogs: Record<string, Vlog> = {
         items: [
           "Planeación estratégica que alinea tu negocio con las oportunidades reales del mercado.",
           "Estructura fiscal y financiera que te permite crecer sin exponerte a riesgos innecesarios.",
-          "Acceso inteligente a recursos — porque sabemos identificar qué esquemas de apoyo aplican a tu situación y cómo presentarlos correctamente.",
-          "Acompañamiento continuo — no un trámite puntual, sino una ruta de crecimiento con visión de largo plazo.",
+          "Acceso inteligente a recursos porque sabemos identificar qué esquemas de apoyo aplican a tu situación y cómo presentarlos correctamente.",
+          "Acompañamiento continuo no un trámite puntual, sino una ruta de crecimiento con visión de largo plazo.",
         ],
       },
       {
