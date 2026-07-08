@@ -160,6 +160,7 @@ function LocationPage() {
           ))}
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
