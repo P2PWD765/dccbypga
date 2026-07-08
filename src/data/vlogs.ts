@@ -182,7 +182,7 @@ export const vlogs: Record<string, Vlog> = {
       { type: "p", text: "Pero la historia también enseña que el recurso sin guía se desperdicia." },
       {
         type: "p",
-        text: "Si tienes un negocio o estás por emprender, no necesitas solo información — necesitas un equipo que conozca el camino, anticipe los riesgos y construya contigo la ruta más sólida hacia el crecimiento.",
+        text: "Si tienes un negocio o estás por emprender, no necesitas solo información necesitas un equipo que conozca el camino, anticipe los riesgos y construya contigo la ruta más sólida hacia el crecimiento.",
       },
       { type: "p", text: "Emprender en México sí es posible. Con la guía correcta, es inevitable." },
       {
