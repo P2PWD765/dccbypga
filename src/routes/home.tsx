@@ -290,7 +290,7 @@ function BlogCardInner({
                         DCC Insights · Episodio {idx + 1}
                       </p>
                     )}
-                    {idx === 0 && (
+                    {(idx === 0 || idx === 1) && (
                       <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2 text-xs font-medium text-white transition-colors group-hover:bg-brand-teal">
                         Ver Vlog <ArrowRight className="h-3.5 w-3.5" />
                       </span>
