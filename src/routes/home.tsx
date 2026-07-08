@@ -64,10 +64,10 @@ const noticias = [
 
 const blogs = [
   {
-    title: "De la Idea al Éxito: ¿Quién te da dirección al emprender?",
+    title: "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego",
     duration: "12:04",
     description:
-      "¿Cuántas veces has pensado en emprender y ganar el doble? El mercado no se detuvo tras la desaparición del INADEM. Descubre cómo estructurar tu idea y dar el salto definitivo con la brújula correcta.",
+      "México está atravesando un momento histórico con el nearshoring. Descubre por qué tu negocio necesita estrategas que conocieron las reglas del juego desde adentro.",
   },
   { title: "Optimización fiscal 2026", duration: "08:32" },
   { title: "Transformación digital empresarial", duration: "15:21" },

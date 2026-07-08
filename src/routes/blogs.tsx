@@ -24,7 +24,7 @@ export const Route = createFileRoute("/blogs")({
 });
 
 const blogs = [
-  { title: "Estrategia financiera para PyMEs", duration: "12:04" },
+  { title: "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego", duration: "12:04" },
   { title: "Optimización fiscal 2026", duration: "08:32" },
   { title: "Transformación digital empresarial", duration: "15:21" },
   { title: "Gobierno corporativo efectivo", duration: "10:47" },
