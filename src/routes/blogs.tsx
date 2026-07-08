@@ -25,7 +25,7 @@ export const Route = createFileRoute("/blogs")({
 
 const blogs = [
   { title: "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego", duration: "12:04" },
-  { title: "Optimización fiscal 2026", duration: "08:32" },
+  { title: "De los fondos de Fox a tu negocio: por qué emprender en México sí es posible con la guía correcta", duration: "10:47" },
   { title: "Transformación digital empresarial", duration: "15:21" },
   { title: "Gobierno corporativo efectivo", duration: "10:47" },
   { title: "Gestión del talento estratégico", duration: "09:15" },
@@ -49,11 +49,11 @@ function BlogsPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {blogs.map((v, idx) => (
-              idx === 0 ? (
+              idx === 0 || idx === 1 ? (
               <Link
                 key={v.title}
                 to="/blog/$slug"
-                params={{ slug: "vlog-1" }}
+                params={{ slug: idx === 0 ? "vlog-1" : "vlog-2" }}
                 className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <CardBody v={v} idx={idx} />
