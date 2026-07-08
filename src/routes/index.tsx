@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-brand-ice px-6">
-      <div className="flex flex-col items-center gap-10 text-center animate-in fade-in zoom-in-95 duration-700">
+      <main className="flex flex-col items-center gap-10 text-center animate-in fade-in zoom-in-95 duration-700">
         <img
           src={logo}
           alt="DCC Asesores Empresariales"
@@ -34,7 +34,7 @@ function Index() {
         <p className="text-xs uppercase tracking-[0.3em] text-brand">
           Asesoría Empresarial
         </p>
-      </div>
+      </main>
     </div>
   );
 }
