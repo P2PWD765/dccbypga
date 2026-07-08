@@ -64,6 +64,7 @@ function LocationPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <main>
       <section style={{ background: "#064E3B" }}>
         <div className="mx-auto max-w-5xl px-6 py-24 text-center sm:py-28">
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
