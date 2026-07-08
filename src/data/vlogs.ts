@@ -159,7 +159,7 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Eso significa que tu empresa —ya sea una PyME en crecimiento o un emprendimiento que busca consolidarse— tiene acceso a:",
+        text: "Eso significa que tu empresa ya sea una PyME en crecimiento o un emprendimiento que busca consolidarse tiene acceso a:",
       },
       {
         type: "ul",
