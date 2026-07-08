@@ -146,7 +146,7 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Ahí es donde la historia de los fondos de Fox cobra relevancia actual: aquella política demostró que el emprendimiento escala cuando existe acompañamiento profesional — alguien que entienda el ecosistema, conozca los mecanismos de apoyo y sepa traducir oportunidades en resultados medibles.",
+        text: "Ahí es donde la historia de los fondos de Fox cobra relevancia actual: aquella política demostró que el emprendimiento escala cuando existe acompañamiento profesional alguien que entienda el ecosistema, conozca los mecanismos de apoyo y sepa traducir oportunidades en resultados medibles.",
       },
       { type: "h2", text: "Por qué DCC es el aliado que tu PyME necesita" },
       {
