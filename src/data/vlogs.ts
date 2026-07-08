@@ -92,7 +92,7 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Entonces algo cambió. Vicente Fox llegó a la presidencia con una visión clara: no combatir la pobreza regalando dependencia, sino generando riqueza desde abajo — desde el hogar, desde la comunidad, desde el negocio. Esa visión se convirtió en una de las políticas de fomento empresarial más ambiciosas de la historia reciente de México.",
+        text: "Entonces algo cambió. Vicente Fox llegó a la presidencia con una visión clara: no combatir la pobreza regalando dependencia, sino generando riqueza desde abajo desde el hogar, desde la comunidad, desde el negocio. Esa visión se convirtió en una de las políticas de fomento empresarial más ambiciosas de la historia reciente de México.",
       },
       {
         type: "p",
