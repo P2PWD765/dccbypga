@@ -27,9 +27,11 @@ function ConocenosHistoriaPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <Header />
-      <CoreIdentity />
-      <LinkedInCTA />
+      <main>
+        <Header />
+        <CoreIdentity />
+        <LinkedInCTA />
+      </main>
       <Footer />
     </div>
   );
