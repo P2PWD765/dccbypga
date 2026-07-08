@@ -58,8 +58,9 @@ function CulturaPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <main>
 
-      {/* Section 1: Header */}
+        {/* Section 1: Header */}
       <section className="bg-brand-ice">
         <div className="mx-auto max-w-5xl px-6 py-24 text-center sm:py-28 md:py-32">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.4em] text-brand-mid">
@@ -137,7 +138,7 @@ function CulturaPage() {
                   </h3>
                   <p
                     className={`mt-3 text-sm leading-relaxed ${
-                      featured ? "text-white/85" : "text-brand-mid"
+                      featured ? "text-white" : "text-brand-mid"
                     }`}
                   >
                     {p.text}
@@ -148,6 +149,7 @@ function CulturaPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

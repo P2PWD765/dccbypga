@@ -27,9 +27,11 @@ function ConocenosHistoriaPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <Header />
-      <CoreIdentity />
-      <LinkedInCTA />
+      <main>
+        <Header />
+        <CoreIdentity />
+        <LinkedInCTA />
+      </main>
       <Footer />
     </div>
   );
@@ -111,7 +113,7 @@ function CoreIdentity() {
                 />
                 <p
                   className={`mt-6 text-sm leading-relaxed ${
-                    isMid ? "text-white/85" : "text-brand-mid"
+                    isMid ? "text-white" : "text-brand-mid"
                   }`}
                 >
                   {pillar.text}

@@ -31,14 +31,14 @@ export function Footer() {
           <div className="mb-5 inline-block rounded bg-white px-3 py-2">
             <img src={logo} alt="DCC" className="h-10 w-auto" />
           </div>
-          <p className="max-w-xs text-sm leading-relaxed text-white/70">
+          <p className="max-w-xs text-sm leading-relaxed text-white">
             Asesoría empresarial estratégica, financiera y fiscal para
             empresas que buscan crecer con visión a largo plazo.
           </p>
         </div>
 
         <div>
-          <h4 className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-white/60">
+          <h4 className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-white">
             Contacto
           </h4>
           <div className="flex flex-col gap-3">
@@ -83,10 +83,10 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-white/60">
+          <h4 className="mb-5 text-xs font-medium uppercase tracking-[0.3em] text-white">
             Enlaces
           </h4>
-          <ul className="space-y-3 text-sm text-white/85">
+          <ul className="space-y-3 text-sm text-white">
             <li className="cursor-pointer transition-colors hover:text-white">Servicios</li>
             <li><Link to="/conocenos/cultura" className="transition-colors hover:text-white">Nuestra cultura organizacional</Link></li>
             <li className="cursor-pointer transition-colors hover:text-white">Nuestra trayectoria</li>
@@ -96,7 +96,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-white/60 sm:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-white sm:flex-row">
           <span>© 2026 DCC Asesores Empresariales. Todos los derechos reservados.</span>
           <span>Aviso de privacidad · Términos</span>
         </div>
