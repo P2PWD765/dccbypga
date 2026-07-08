@@ -31,7 +31,7 @@ function Index() {
         >
           Entrar
         </Link>
-        <p className="text-xs uppercase tracking-[0.3em] text-brand/60">
+        <p className="text-xs uppercase tracking-[0.3em] text-brand">
           Asesoría Empresarial
         </p>
       </div>

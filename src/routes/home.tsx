@@ -111,14 +111,14 @@ function Hero() {
         }}
       />
       <div className="relative mx-auto max-w-5xl px-6 py-28 sm:py-36 md:py-44">
-        <p className="mb-6 text-xs font-medium uppercase tracking-[0.4em] text-white/70">
+        <p className="mb-6 text-xs font-medium uppercase tracking-[0.4em] text-white">
           Consultoría Empresarial
         </p>
         <h1 className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
           Estrategia, claridad y resultados para empresas que buscan crecer con
           inteligencia.
         </h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/80">
+        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white">
           En DCC Asesores Empresariales acompañamos a líderes y directivos con
           asesoría financiera, fiscal y estratégica diseñada para transformar
           retos en oportunidades sostenibles.
@@ -185,14 +185,14 @@ function Noticias() {
               </h3>
               <p
                 className={`mb-6 text-sm leading-relaxed ${
-                  i % 2 === 0 ? "text-slate-600" : "text-white/80"
+                  i % 2 === 0 ? "text-slate-600" : "text-white"
                 }`}
               >
                 {n.excerpt}
               </p>
               <div
                 className={`mt-auto flex items-center justify-between text-xs ${
-                  i % 2 === 0 ? "text-slate-500" : "text-white/70"
+                  i % 2 === 0 ? "text-slate-500" : "text-white"
                 }`}
               >
                 <span>{n.date}</span>

@@ -111,7 +111,7 @@ function CoreIdentity() {
                 />
                 <p
                   className={`mt-6 text-sm leading-relaxed ${
-                    isMid ? "text-white/85" : "text-brand-mid"
+                    isMid ? "text-white" : "text-brand-mid"
                   }`}
                 >
                   {pillar.text}

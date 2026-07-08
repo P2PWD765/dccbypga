@@ -69,7 +69,7 @@ function LocationPage() {
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
             Ubicación
           </h1>
-          <p className="mt-6 text-lg text-white/90">
+          <p className="mt-6 text-lg text-white">
             Nuestras oficinas en México a tu servicio.
           </p>
         </div>

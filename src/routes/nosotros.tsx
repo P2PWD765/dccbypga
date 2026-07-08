@@ -88,7 +88,7 @@ function Header() {
           Sobre nosotros
         </h1>
         <p
-          className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white/90"
+          className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white"
         >
           Experiencia, estrategia y seguridad jurídica.
         </p>

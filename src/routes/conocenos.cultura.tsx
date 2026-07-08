@@ -137,7 +137,7 @@ function CulturaPage() {
                   </h3>
                   <p
                     className={`mt-3 text-sm leading-relaxed ${
-                      featured ? "text-white/85" : "text-brand-mid"
+                      featured ? "text-white" : "text-brand-mid"
                     }`}
                   >
                     {p.text}

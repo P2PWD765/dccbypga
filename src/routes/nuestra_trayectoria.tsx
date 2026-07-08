@@ -34,7 +34,7 @@ function NuestraTrayectoriaPage() {
           <h1 className="text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl text-white">
             Nuestra Trayectoria
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white/90">
+          <p className="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white">
             Décadas construyendo confianza y resultados.
           </p>
         </div>
