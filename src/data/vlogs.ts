@@ -96,7 +96,7 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Y aquí está la lección que sigue vigente hoy: emprender en México sí es posible. Pero no porque el gobierno lo resuelva todo — sino porque quien tiene la guía correcta puede convertir oportunidades en crecimiento real.",
+        text: "Y aquí está la lección que sigue vigente hoy: emprender en México sí es posible. Pero no porque el gobierno lo resuelva todo sino porque quien tiene la guía correcta puede convertir oportunidades en crecimiento real.",
       },
       { type: "h2", text: "Cuando un presidente apostó por las PyMEs" },
       {
