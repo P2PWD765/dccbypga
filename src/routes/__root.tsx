@@ -77,6 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "google-site-verification", content: "jWu5dMYuNsCExLZb0IsUE0JtqJtvEsNprjte9lGK3vs" },
       { title: "Lovable App" },
       { name: "description", content: "DCC Blue Horizon is a professional corporate website for a business advisory firm." },
       { name: "author", content: "Lovable" },
