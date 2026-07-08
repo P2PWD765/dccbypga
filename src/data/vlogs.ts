@@ -107,10 +107,10 @@ export const vlogs: Record<string, Vlog> = {
       {
         type: "ul",
         items: [
-          "FONDO PYME — para impulsar competitividad, innovación y acceso a mercados.",
-          "PRONAFIM — microcréditos para quienes no tenían acceso a la banca tradicional.",
-          "FONAES — apoyo a emprendimientos sociales en comunidades rurales y urbanas.",
-          "FOMMUR — financiamiento dirigido a mujeres emprendedoras del campo.",
+          "FONDO PYME: para impulsar competitividad, innovación y acceso a mercados.",
+          "PRONAFIM: microcréditos para quienes no tenían acceso a la banca tradicional.",
+          "FONAES: apoyo a emprendimientos sociales en comunidades rurales y urbanas.",
+          "FOMMUR: financiamiento dirigido a mujeres emprendedoras del campo.",
         ],
       },
       {
