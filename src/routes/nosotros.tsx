@@ -67,9 +67,11 @@ function NosotrosPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <Header />
-      <Overview />
-      <TeamGrid />
+      <main>
+        <Header />
+        <Overview />
+        <TeamGrid />
+      </main>
       <Footer />
     </div>
   );
