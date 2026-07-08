@@ -69,7 +69,13 @@ const blogs = [
     description:
       "México está atravesando un momento histórico con el nearshoring. Descubre por qué tu negocio necesita estrategas que conocieron las reglas del juego desde adentro.",
   },
-  { title: "Optimización fiscal 2026", duration: "08:32" },
+  {
+    title:
+      "De los fondos de Fox a tu negocio: por qué emprender en México sí es posible con la guía correcta",
+    duration: "10:47",
+    description:
+      "Vicente Fox impulsó más de 12,000 millones de pesos en fondos para PyMEs. La lección no es solo histórica: hoy, con el asesor correcto, tu empresa puede crecer con estrategia.",
+  },
   { title: "Transformación digital empresarial", duration: "15:21" },
   { title: "Gobierno corporativo efectivo", duration: "10:47" },
   { title: "Gestión del talento estratégico", duration: "09:15" },
@@ -220,9 +226,10 @@ function Blogs() {
                 key={v.title}
                 className="pl-6 md:basis-1/2 lg:basis-1/3"
               >
-                {idx === 0 ? (
+                {idx === 0 || idx === 1 ? (
                 <Link
-                  to="/vlog-1"
+                  to="/blog/$slug"
+                  params={{ slug: idx === 0 ? "vlog-1" : "vlog-2" }}
                   className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
                 >
                   <BlogCardInner v={v} idx={idx} />
@@ -283,7 +290,7 @@ function BlogCardInner({
                         DCC Insights · Episodio {idx + 1}
                       </p>
                     )}
-                    {idx === 0 && (
+                    {(idx === 0 || idx === 1) && (
                       <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2 text-xs font-medium text-white transition-colors group-hover:bg-brand-teal">
                         Ver Vlog <ArrowRight className="h-3.5 w-3.5" />
                       </span>
