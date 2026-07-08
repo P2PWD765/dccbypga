@@ -58,8 +58,9 @@ function CulturaPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <main>
 
-      {/* Section 1: Header */}
+        {/* Section 1: Header */}
       <section className="bg-brand-ice">
         <div className="mx-auto max-w-5xl px-6 py-24 text-center sm:py-28 md:py-32">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.4em] text-brand-mid">
