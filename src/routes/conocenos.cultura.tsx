@@ -149,6 +149,7 @@ function CulturaPage() {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
