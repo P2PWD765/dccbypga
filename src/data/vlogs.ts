@@ -129,7 +129,7 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "De hecho, estudios de la época mostraron que el 67% de los beneficiarios consideraba que los apoyos tuvieron poco o ningún impacto en sus utilidades. No porque la intención fuera mala — sino porque tener acceso a recursos sin asesoría especializada es como tener gasolina sin mapa.",
+        text: "De hecho, estudios de la época mostraron que el 67% de los beneficiarios consideraba que los apoyos tuvieron poco o ningún impacto en sus utilidades. No porque la intención fuera mala sino porque tener acceso a recursos sin asesoría especializada es como tener gasolina sin mapa.",
       },
       {
         type: "p",
