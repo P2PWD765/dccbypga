@@ -92,11 +92,11 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Entonces algo cambió. Vicente Fox llegó a la presidencia con una visión clara: no combatir la pobreza regalando dependencia, sino generando riqueza desde abajo — desde el hogar, desde la comunidad, desde el negocio. Esa visión se convirtió en una de las políticas de fomento empresarial más ambiciosas de la historia reciente de México.",
+        text: "Entonces algo cambió. Vicente Fox llegó a la presidencia con una visión clara: no combatir la pobreza regalando dependencia, sino generando riqueza desde abajo desde el hogar, desde la comunidad, desde el negocio. Esa visión se convirtió en una de las políticas de fomento empresarial más ambiciosas de la historia reciente de México.",
       },
       {
         type: "p",
-        text: "Y aquí está la lección que sigue vigente hoy: emprender en México sí es posible. Pero no porque el gobierno lo resuelva todo — sino porque quien tiene la guía correcta puede convertir oportunidades en crecimiento real.",
+        text: "Y aquí está la lección que sigue vigente hoy: emprender en México sí es posible. Pero no porque el gobierno lo resuelva todo sino porque quien tiene la guía correcta puede convertir oportunidades en crecimiento real.",
       },
       { type: "h2", text: "Cuando un presidente apostó por las PyMEs" },
       {
@@ -107,10 +107,10 @@ export const vlogs: Record<string, Vlog> = {
       {
         type: "ul",
         items: [
-          "FONDO PYME — para impulsar competitividad, innovación y acceso a mercados.",
-          "PRONAFIM — microcréditos para quienes no tenían acceso a la banca tradicional.",
-          "FONAES — apoyo a emprendimientos sociales en comunidades rurales y urbanas.",
-          "FOMMUR — financiamiento dirigido a mujeres emprendedoras del campo.",
+          "FONDO PYME: para impulsar competitividad, innovación y acceso a mercados.",
+          "PRONAFIM: microcréditos para quienes no tenían acceso a la banca tradicional.",
+          "FONAES: apoyo a emprendimientos sociales en comunidades rurales y urbanas.",
+          "FOMMUR: financiamiento dirigido a mujeres emprendedoras del campo.",
         ],
       },
       {
@@ -129,7 +129,7 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "De hecho, estudios de la época mostraron que el 67% de los beneficiarios consideraba que los apoyos tuvieron poco o ningún impacto en sus utilidades. No porque la intención fuera mala — sino porque tener acceso a recursos sin asesoría especializada es como tener gasolina sin mapa.",
+        text: "De hecho, estudios de la época mostraron que el 67% de los beneficiarios consideraba que los apoyos tuvieron poco o ningún impacto en sus utilidades. No porque la intención fuera mala sino porque tener acceso a recursos sin asesoría especializada es como tener gasolina sin mapa.",
       },
       {
         type: "p",
@@ -142,11 +142,11 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Pero también hay más competencia, más regulación y una autoridad fiscal más rigurosa. Crecer un negocio ya no se trata solo de vender más — se trata de estructurarte con inteligencia para no ahogarte en contingencias fiscales, legales y financieras.",
+        text: "Pero también hay más competencia, más regulación y una autoridad fiscal más rigurosa. Crecer un negocio ya no se trata solo de vender más se trata de estructurarte con inteligencia para no ahogarte en contingencias fiscales, legales y financieras.",
       },
       {
         type: "p",
-        text: "Ahí es donde la historia de los fondos de Fox cobra relevancia actual: aquella política demostró que el emprendimiento escala cuando existe acompañamiento profesional — alguien que entienda el ecosistema, conozca los mecanismos de apoyo y sepa traducir oportunidades en resultados medibles.",
+        text: "Ahí es donde la historia de los fondos de Fox cobra relevancia actual: aquella política demostró que el emprendimiento escala cuando existe acompañamiento profesional alguien que entienda el ecosistema, conozca los mecanismos de apoyo y sepa traducir oportunidades en resultados medibles.",
       },
       { type: "h2", text: "Por qué DCC es el aliado que tu PyME necesita" },
       {
@@ -159,15 +159,15 @@ export const vlogs: Record<string, Vlog> = {
       },
       {
         type: "p",
-        text: "Eso significa que tu empresa —ya sea una PyME en crecimiento o un emprendimiento que busca consolidarse— tiene acceso a:",
+        text: "Eso significa que tu empresa ya sea una PyME en crecimiento o un emprendimiento que busca consolidarse tiene acceso a:",
       },
       {
         type: "ul",
         items: [
           "Planeación estratégica que alinea tu negocio con las oportunidades reales del mercado.",
           "Estructura fiscal y financiera que te permite crecer sin exponerte a riesgos innecesarios.",
-          "Acceso inteligente a recursos — porque sabemos identificar qué esquemas de apoyo aplican a tu situación y cómo presentarlos correctamente.",
-          "Acompañamiento continuo — no un trámite puntual, sino una ruta de crecimiento con visión de largo plazo.",
+          "Acceso inteligente a recursos porque sabemos identificar qué esquemas de apoyo aplican a tu situación y cómo presentarlos correctamente.",
+          "Acompañamiento continuo no un trámite puntual, sino una ruta de crecimiento con visión de largo plazo.",
         ],
       },
       {
@@ -182,7 +182,7 @@ export const vlogs: Record<string, Vlog> = {
       { type: "p", text: "Pero la historia también enseña que el recurso sin guía se desperdicia." },
       {
         type: "p",
-        text: "Si tienes un negocio o estás por emprender, no necesitas solo información — necesitas un equipo que conozca el camino, anticipe los riesgos y construya contigo la ruta más sólida hacia el crecimiento.",
+        text: "Si tienes un negocio o estás por emprender, no necesitas solo información necesitas un equipo que conozca el camino, anticipe los riesgos y construya contigo la ruta más sólida hacia el crecimiento.",
       },
       { type: "p", text: "Emprender en México sí es posible. Con la guía correcta, es inevitable." },
       {
