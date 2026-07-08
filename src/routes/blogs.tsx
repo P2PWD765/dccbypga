@@ -36,40 +36,42 @@ function BlogsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <section className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-14">
-            <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand-teal">
-              Conocimiento
-            </p>
-            <h1 className="text-4xl font-semibold tracking-tight text-brand sm:text-5xl">
-              Nuestro Blog
-            </h1>
-          </div>
+      <main>
+        <section className="bg-white py-24">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="mb-14">
+              <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand-teal">
+                Conocimiento
+              </p>
+              <h1 className="text-4xl font-semibold tracking-tight text-brand sm:text-5xl">
+                Nuestro Blog
+              </h1>
+            </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {blogs.map((v, idx) => (
-              idx === 0 || idx === 1 ? (
-              <Link
-                key={v.title}
-                to="/blog/$slug"
-                params={{ slug: idx === 0 ? "vlog-1" : "vlog-2" }}
-                className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
-              >
-                <CardBody v={v} idx={idx} />
-              </Link>
-              ) : (
-              <div
-                key={v.title}
-                className="group cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
-              >
-                <CardBody v={v} idx={idx} />
-              </div>
-              )
-            ))}
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {blogs.map((v, idx) => (
+                idx === 0 || idx === 1 ? (
+                <Link
+                  key={v.title}
+                  to="/blog/$slug"
+                  params={{ slug: idx === 0 ? "vlog-1" : "vlog-2" }}
+                  className="group block cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <CardBody v={v} idx={idx} />
+                </Link>
+                ) : (
+                <div
+                  key={v.title}
+                  className="group cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <CardBody v={v} idx={idx} />
+                </div>
+                )
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
       <Footer />
     </div>
   );
