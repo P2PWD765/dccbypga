@@ -9,9 +9,13 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import { offices as officeData } from "@/data/offices";
-import cdmxImg from "@/assets/city-cdmx.jpg";
-import mtyImg from "@/assets/city-mty.jpg";
-import qroImg from "@/assets/city-qro.jpg";
+import cdmxAsset from "@/assets/city-cdmx.jpg.asset.json";
+import mtyAsset from "@/assets/city-mty.webp.asset.json";
+import qroAsset from "@/assets/city-qro.jpg.asset.json";
+
+const cdmxImg = cdmxAsset.url;
+const mtyImg = mtyAsset.url;
+const qroImg = qroAsset.url;
 
 export const Route = createFileRoute("/location")({
   head: () => ({
