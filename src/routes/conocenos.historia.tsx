@@ -139,7 +139,7 @@ function LinkedInCTA() {
           directamente desde nuestra red corporativa.
         </p>
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/company/dcc-asesores-empresariales-s-c/about/"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center gap-3 rounded-full bg-brand px-8 py-3.5 text-sm font-medium text-white shadow-lg transition-all hover:bg-brand-teal hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-offset-2"
