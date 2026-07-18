@@ -10,6 +10,11 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import asesoriaImg from "@/assets/svc-asesoria.jpg.asset.json";
+import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
+import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
+import holisticoImg from "@/assets/svc-holistico.jpg.asset.json";
+import otrosImg from "@/assets/svc-otros.jpg.asset.json";
 
 export const Route = createFileRoute("/servicios")({
   head: () => ({
@@ -34,30 +39,35 @@ export const Route = createFileRoute("/servicios")({
 const servicios = [
   {
     title: "Asesoría",
+    image: asesoriaImg.url,
     description:
       "Te brindamos tranquilidad a través de soluciones efectuadas a la medida en un marco legal en la aplicación de las disposiciones fiscales considerando las necesidades particulares, con un enfoque principal en el cuidado del patrimonio de nuestros clientes.",
     email: "asesoria@dcc-asesores.com",
   },
   {
     title: "Cumplimiento y Devoluciones",
+    image: cumplimientoImg.url,
     description:
       "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
     email: "cumplimiento@dcc-asesores.com",
   },
   {
     title: "Controversia",
+    image: controversiaImg.url,
     description:
       "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
     email: "controversia@dcc-asesores.com",
   },
   {
     title: "Enfoque Holístico",
+    image: holisticoImg.url,
     description:
       "La experiencia de nuestra Firma, permite tener un enfoque holístico, que conlleva a un servicio integral, basado en el entendimiento del modelo de negocio de cada uno de nuestros clientes.",
     email: "consultoria@dcc-asesores.com",
   },
   {
     title: "Otros Servicios",
+    image: otrosImg.url,
     description:
       "Precios de Transferencia, apoyamos en la correcta determinación del valor justo de mercado, así como asesoramos en la aplicación de las normas aplicables en esta materia. Tax Technology implementamos herramientas tecnológicas que facilitan y aseguran el manejo de tu información fiscal, legal, etc, para un debido cumplimiento.",
     email: "servicios@dcc-asesores.com",
@@ -85,8 +95,18 @@ function ServiciosPage() {
             {servicios.map((s) => (
               <Card
                 key={s.title}
-                className="flex flex-col border-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="flex flex-col overflow-hidden border-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
+                <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    loading="lazy"
+                    width={1024}
+                    height={576}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
                 <CardHeader>
                   <CardTitle className="text-xl text-brand">{s.title}</CardTitle>
                 </CardHeader>
