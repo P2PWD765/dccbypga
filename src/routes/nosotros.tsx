@@ -37,6 +37,7 @@ const team = [
   {
     name: "David Edgardo Ruiz Enríquez",
     role: "Asesor de Negocios y Especialista Fiscal",
+    email: "druiz@dcc-asesores.com",
     contact: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
     shortBio:
       "Especialista en materia fiscal y negocios con más de 30 años de experiencia. Exsocio de Impuestos Internacionales en Ernst & Young y exfuncionario de Grandes Contribuyentes en el SAT. Cuenta con una sólida trayectoria en consultoría nacional e internacional y docencia de posgrado.",
