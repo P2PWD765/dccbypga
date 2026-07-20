@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, User, Mail } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +9,28 @@ import {
 } from "@/components/ui/carousel";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import davidRuizAsset from "@/assets/david-ruiz.png.asset.json";
+import carlosVillegasAsset from "@/assets/carlos-villegas.png.asset.json";
+import cesarHernandezAsset from "@/assets/cesar-hernandez.png.asset.json";
+import asesoriaImg from "@/assets/svc-asesoria.jpg.asset.json";
+import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
+import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -31,34 +53,60 @@ export const Route = createFileRoute("/home")({
 });
 
 
-const noticias = [
+const team = [
   {
-    tag: "Cultura",
-    title: "Capacitación Continua para Nuestro Equipo",
-    excerpt:
-      "El éxito de nuestros clientes comienza con el desarrollo de nuestra gente. Hemos implementado nuevos programas de formación estratégica y actualización constante para asegurar que nuestro equipo ofrezca soluciones con la más alta visión de negocio.",
-    date: "12 Jun 2026",
+    name: "David Edgardo Ruiz Enríquez",
+    role: "Asesor de Negocios y Especialista Fiscal",
+    email: "druiz@dcc-asesores.com",
+    contact: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
+    shortBio:
+      "Especialista en materia fiscal y negocios con más de 30 años de experiencia. Exsocio de Impuestos Internacionales en Ernst & Young y exfuncionario de Grandes Contribuyentes en el SAT. Cuenta con una sólida trayectoria en consultoría nacional e internacional y docencia de posgrado.",
+    bio: "Asesor de negocios y especialista en materia fiscal con más de 30 años de experiencia. En la iniciativa privada inició su carrera en la firma Ernst & Young, donde fue Socio en el área de Impuestos Internacionales. Posteriormente colaboró en el despacho GL como Socio Director de la Oficina Noreste de México. En ambas Firmas tuvo la oportunidad de asesorar a Empresas Nacionales e Internacionales. En el Servicio de Administración Tributaria, se desempeñó como Administrador Central de Planeación y Programación en Grandes Contribuyentes, Administrador Central de Auditoría Fiscal Internacional y también fungió como Administrador Central encargado del Programa de Cooperación Voluntaria con Grandes Contribuyentes.",
+    photo: davidRuizAsset.url,
   },
   {
-    tag: "Cultura",
-    title: "Innovación Estratégica",
-    excerpt:
-      "Impulsamos nuevas ideas y metodologías para transformar los retos de nuestros clientes en oportunidades.",
-    date: "03 Jun 2026",
+    name: "Carlos Alberto Villegas Pérez",
+    role: "Especialista en Fiscalización y Controversia",
+    email: "cvillegas@dcc-asesores.com",
+    contact: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
+    shortBio:
+      "Contador Público y Maestro en Derecho Fiscal con más de 12 años de trayectoria dual en el SAT (Grandes Contribuyentes e Hidrocarburos) y la asesoría privada. Experto en mitigación de riesgos fiscales y atención de auditorías corporativas.",
+    bio: "Especialista en materia fiscal con más de 12 años de experiencia en fiscalización y controversia, con una trayectoria que combina su experiencia tanto como autoridad y asesor, lo que le permite abordar los asuntos fiscales desde una perspectiva integral y estratégica. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal y administrativo por la Universidad Anáhuac.",
+    photo: carlosVillegasAsset.url,
   },
   {
-    tag: "Cultura",
-    title: "Integridad Empresarial",
-    excerpt:
-      "Actuamos con ética, transparencia y responsabilidad en cada decisión y relación profesional.",
-    date: "28 May 2026",
+    name: "Carlos César Hernandez",
+    role: "Consultor de Impuestos Nacionales e Internacionales",
+    email: "chernandez@dcc-asesores.com",
+    contact: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
+    shortBio:
+      "Especialista en consultoría fiscal, fusiones y reestructuras corporativas con más de 20 años de experiencia. Ha asesorado a importantes grupos empresariales como Televisa, Grupo Ángeles y Grupo Bal en diversos sectores comerciales e industriales.",
+    bio: "Experiencia profesional de más de 20 años en asesoría de impuestos tanto en el área nacional como internacional, en aspectos como reestructuras corporativas, fusiones, escisiones, costos fiscales, inversiones patrimoniales, diagnósticos tributarios y consultoría fiscal. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal por la Universidad Panamericana.",
+    photo: cesarHernandezAsset.url,
+  },
+];
+
+const homeServiciosMailto =
+  "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB";
+
+const servicios = [
+  {
+    title: "Asesoría",
+    image: asesoriaImg.url,
+    description:
+      "Te brindamos tranquilidad a través de soluciones efectuadas a la medida en un marco legal en la aplicación de las disposiciones fiscales considerando las necesidades particulares, con un enfoque principal en el cuidado del patrimonio de nuestros clientes.",
   },
   {
-    tag: "Cultura",
-    title: "Orientación a Resultados",
-    excerpt:
-      "Enfocamos cada proyecto en generar valor medible y sostenible para nuestros clientes.",
-    date: "15 May 2026",
+    title: "Cumplimiento y Devoluciones",
+    image: cumplimientoImg.url,
+    description:
+      "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
+  },
+  {
+    title: "Controversia",
+    image: controversiaImg.url,
+    description:
+      "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
   },
 ];
 
@@ -88,7 +136,8 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Noticias />
+        <TeamSection />
+        <ServiciosSection />
         <Blogs />
       </main>
       <Footer />
