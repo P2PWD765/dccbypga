@@ -189,67 +189,139 @@ function Hero() {
   );
 }
 
-function Noticias() {
+function TeamSection() {
   return (
     <section className="bg-brand-ice py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 flex items-end justify-between gap-6">
           <div>
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand-teal">
-              Actualidad
+              Equipo
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
-              Anuncios
+              Conoce a nuestro equipo
             </h2>
           </div>
-          <a className="hidden text-sm font-medium text-brand-teal hover:underline sm:inline">
-            Ver todo →
-          </a>
         </div>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {team.map((member) => (
+            <Dialog key={member.name}>
+              <DialogTrigger asChild>
+                <button
+                  type="button"
+                  className="group flex flex-col items-center rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                >
+                  <div className="mb-6 flex h-28 w-28 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="h-full w-full rounded-full object-cover"
+                      />
+                    ) : (
+                      <User className="h-12 w-12 text-brand-mid" />
+                    )}
+                  </div>
+                  <h3 className="text-lg font-bold text-brand">{member.name}</h3>
+                  <p className="mt-1 text-sm font-medium text-brand-teal">
+                    {member.role}
+                  </p>
+                  <a
+                    href={`mailto:${member.email}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-brand-teal transition-colors hover:bg-brand-ice hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                    aria-label={`Enviar correo a ${member.name}`}
+                    title="Enviar correo"
+                  >
+                    <Mail className="h-4 w-4" />
+                  </a>
+                  <p className="mt-4 text-sm leading-relaxed text-brand-mid">
+                    {member.shortBio}
+                  </p>
+                  <span className="mt-6 inline-flex items-center rounded-full border border-brand-teal px-4 py-1.5 text-xs font-semibold text-brand-teal transition-colors group-hover:bg-brand-teal group-hover:text-white">
+                    Ver perfil completo
+                  </span>
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-lg">
+                <DialogHeader>
+                  <div className="mx-auto mb-4 flex h-44 w-44 items-center justify-center rounded-full bg-brand-ice ring-4 ring-white shadow-md">
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={member.name}
+                        className="h-full w-full rounded-full object-cover"
+                      />
+                    ) : (
+                      <User className="h-14 w-14 text-brand-mid" />
+                    )}
+                  </div>
+                  <DialogTitle className="text-center text-2xl text-brand">
+                    {member.name}
+                  </DialogTitle>
+                  <p className="mt-1 text-center text-sm font-semibold text-brand-teal">
+                    {member.role}
+                  </p>
+                  <p className="mt-2 text-center text-xs text-brand-mid whitespace-pre-line">
+                    {member.contact}
+                  </p>
+                </DialogHeader>
+                <div className="mt-4 max-h-[50vh] overflow-y-auto px-2 text-sm leading-relaxed text-brand-mid">
+                  {member.bio}
+                </div>
+              </DialogContent>
+            </Dialog>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {noticias.map((n, i) => (
-            <Link
-              key={n.title}
-              to="/nuestra_trayectoria"
-              className={`group flex flex-col rounded-2xl p-7 shadow-sm ring-1 transition-all hover:-translate-y-1 hover:shadow-xl ${
-                i % 2 === 0
-                  ? "bg-white ring-black/5"
-                  : "bg-brand-mid text-white ring-transparent"
-              }`}
+function ServiciosSection() {
+  return (
+    <section className="bg-brand-ice py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-14 flex items-end justify-between gap-6">
+          <div>
+            <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-brand-teal">
+              Servicios
+            </p>
+            <h2 className="text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
+              Nuestros Servicios
+            </h2>
+          </div>
+        </div>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {servicios.map((s) => (
+            <Card
+              key={s.title}
+              className="flex flex-col overflow-hidden border-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <span
-                className={`mb-5 inline-flex w-fit rounded-full px-3 py-1 text-[11px] font-medium uppercase tracking-wider ${
-                  i % 2 === 0
-                    ? "bg-brand-ice text-brand"
-                    : "bg-white/15 text-white"
-                }`}
-              >
-                {n.tag}
-              </span>
-              <h3
-                className={`mb-3 text-lg font-semibold leading-snug ${
-                  i % 2 === 0 ? "text-brand" : "text-white"
-                }`}
-              >
-                {n.title}
-              </h3>
-              <p
-                className={`mb-6 text-sm leading-relaxed ${
-                  i % 2 === 0 ? "text-slate-600" : "text-white"
-                }`}
-              >
-                {n.excerpt}
-              </p>
-              <div
-                className={`mt-auto flex items-center justify-between text-xs ${
-                  i % 2 === 0 ? "text-slate-500" : "text-white"
-                }`}
-              >
-                <span>{n.date}</span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  loading="lazy"
+                  width={1024}
+                  height={576}
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                />
               </div>
-            </Link>
+              <CardHeader>
+                <CardTitle className="text-xl text-brand">{s.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <CardDescription className="text-sm leading-relaxed text-muted-foreground">
+                  {s.description}
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button asChild variant="outline" className="w-full">
+                  <a href={homeServiciosMailto}>Contáctanos</a>
+                </Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>
