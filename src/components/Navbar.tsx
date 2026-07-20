@@ -57,8 +57,8 @@ export function Navbar() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/nuestra_trayectoria" className="cursor-pointer">
-                  Nuestra trayectoria
+                <Link to="/conocenos/historia" className="cursor-pointer">
+                  Conócenos
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
