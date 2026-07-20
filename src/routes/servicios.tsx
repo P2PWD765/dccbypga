@@ -36,47 +36,43 @@ export const Route = createFileRoute("/servicios")({
   component: ServiciosPage,
 });
 
+const sharedMailto =
+  "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB";
+
 const servicios = [
   {
     title: "Asesoría",
     image: asesoriaImg.url,
     description:
       "Te brindamos tranquilidad a través de soluciones efectuadas a la medida en un marco legal en la aplicación de las disposiciones fiscales considerando las necesidades particulares, con un enfoque principal en el cuidado del patrimonio de nuestros clientes.",
-    email: "asesoria@dcc-asesores.com",
-    mailto:
-      "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB",
+    mailto: sharedMailto,
   },
   {
     title: "Cumplimiento y Devoluciones",
     image: cumplimientoImg.url,
     description:
       "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
-    email: "cumplimiento@dcc-asesores.com",
-    mailto:
-      "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB",
+    mailto: sharedMailto,
   },
   {
     title: "Controversia",
     image: controversiaImg.url,
-    description:
-      "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
-    email: "controversia@dcc-asesores.com",
-    mailto:
-      "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB",
+    description: "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
+    mailto: sharedMailto,
   },
   {
     title: "Enfoque Holístico",
     image: holisticoImg.url,
     description:
       "La experiencia de nuestra Firma, permite tener un enfoque holístico, que conlleva a un servicio integral, basado en el entendimiento del modelo de negocio de cada uno de nuestros clientes.",
-    email: "consultoria@dcc-asesores.com",
+    mailto: sharedMailto,
   },
   {
     title: "Otros Servicios",
     image: otrosImg.url,
     description:
       "Precios de Transferencia, apoyamos en la correcta determinación del valor justo de mercado, así como asesoramos en la aplicación de las normas aplicables en esta materia. Tax Technology implementamos herramientas tecnológicas que facilitan y aseguran el manejo de tu información fiscal, legal, etc, para un debido cumplimiento.",
-    email: "servicios@dcc-asesores.com",
+    mailto: sharedMailto,
   },
 ];
 
@@ -123,16 +119,7 @@ function ServiciosPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
-                    <a
-                      href={
-                        s.mailto ??
-                        `mailto:${s.email}?subject=${encodeURIComponent(
-                          `Consulta sobre ${s.title} — DCC Asesores`,
-                        )}`
-                      }
-                    >
-                      Contáctanos
-                    </a>
+                    <a href={s.mailto}>Contáctanos</a>
                   </Button>
                 </CardFooter>
               </Card>
