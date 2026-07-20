@@ -31,6 +31,8 @@ import cesarHernandezAsset from "@/assets/cesar-hernandez.png.asset.json";
 import asesoriaImg from "@/assets/svc-asesoria.jpg.asset.json";
 import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
 import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
+import holisticoImg from "@/assets/svc-holistico.jpg.asset.json";
+import otrosImg from "@/assets/svc-otros.jpg.asset.json";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -107,6 +109,18 @@ const servicios = [
     image: controversiaImg.url,
     description:
       "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
+  },
+  {
+    title: "Enfoque Holístico",
+    image: holisticoImg.url,
+    description:
+      "La experiencia de nuestra Firma, permite tener un enfoque holístico, que conlleva a un servicio integral, basado en el entendimiento del modelo de negocio de cada uno de nuestros clientes.",
+  },
+  {
+    title: "Otros Servicios",
+    image: otrosImg.url,
+    description:
+      "Precios de Transferencia, apoyamos en la correcta determinación del valor justo de mercado, así como asesoramos en la aplicación de las normas aplicables en esta materia. Tax Technology implementamos herramientas tecnológicas que facilitan y aseguran el manejo de tu información fiscal, legal, etc, para un debido cumplimiento.",
   },
 ];
 
@@ -292,38 +306,44 @@ function ServiciosSection() {
             </h2>
           </div>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {servicios.map((s) => (
-            <Card
-              key={s.title}
-              className="flex flex-col overflow-hidden border-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  loading="lazy"
-                  width={1024}
-                  height={576}
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl text-brand">{s.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1">
-                <CardDescription className="text-sm leading-relaxed text-muted-foreground">
-                  {s.description}
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild variant="outline" className="w-full">
-                  <a href={homeServiciosMailto}>Contáctanos</a>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+        <Carousel opts={{ align: "start", loop: false }} className="w-full">
+          <CarouselContent className="-ml-6">
+            {servicios.map((s) => (
+              <CarouselItem
+                key={s.title}
+                className="pl-6 sm:basis-1/2 lg:basis-1/3"
+              >
+                <Card className="flex h-full flex-col overflow-hidden border-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      width={1024}
+                      height={576}
+                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-brand">{s.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <CardDescription className="text-sm leading-relaxed text-muted-foreground">
+                      {s.description}
+                    </CardDescription>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild variant="outline" className="w-full">
+                      <a href={homeServiciosMailto}>Contáctanos</a>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="-left-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
+          <CarouselNext className="-right-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
+        </Carousel>
       </div>
     </section>
   );
