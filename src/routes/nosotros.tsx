@@ -57,6 +57,7 @@ const team = [
   {
     name: "Carlos César Hernandez",
     role: "Consultor de Impuestos Nacionales e Internacionales",
+    email: "chernandez@dcc-asesores.com",
     contact: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     shortBio:
       "Especialista en consultoría fiscal, fusiones y reestructuras corporativas con más de 20 años de experiencia. Ha asesorado a importantes grupos empresariales como Televisa, Grupo Ángeles y Grupo Bal en diversos sectores comerciales e industriales.",
