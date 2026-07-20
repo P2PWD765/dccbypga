@@ -306,38 +306,44 @@ function ServiciosSection() {
             </h2>
           </div>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {servicios.map((s) => (
-            <Card
-              key={s.title}
-              className="flex flex-col overflow-hidden border-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
-                <img
-                  src={s.image}
-                  alt={s.title}
-                  loading="lazy"
-                  width={1024}
-                  height={576}
-                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl text-brand">{s.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1">
-                <CardDescription className="text-sm leading-relaxed text-muted-foreground">
-                  {s.description}
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button asChild variant="outline" className="w-full">
-                  <a href={homeServiciosMailto}>Contáctanos</a>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+        <Carousel opts={{ align: "start", loop: false }} className="w-full">
+          <CarouselContent className="-ml-6">
+            {servicios.map((s) => (
+              <CarouselItem
+                key={s.title}
+                className="pl-6 sm:basis-1/2 lg:basis-1/3"
+              >
+                <Card className="flex h-full flex-col overflow-hidden border-border/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="aspect-[16/9] w-full overflow-hidden bg-muted">
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      width={1024}
+                      height={576}
+                      className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl text-brand">{s.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <CardDescription className="text-sm leading-relaxed text-muted-foreground">
+                      {s.description}
+                    </CardDescription>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild variant="outline" className="w-full">
+                      <a href={homeServiciosMailto}>Contáctanos</a>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="-left-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
+          <CarouselNext className="-right-4 border-brand/20 text-brand hover:bg-brand hover:text-white" />
+        </Carousel>
       </div>
     </section>
   );
