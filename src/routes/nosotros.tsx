@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { User } from "lucide-react";
+import { User, Mail } from "lucide-react";
 import davidRuizAsset from "@/assets/david-ruiz.png.asset.json";
 import carlosVillegasAsset from "@/assets/carlos-villegas.png.asset.json";
 import cesarHernandezAsset from "@/assets/cesar-hernandez.png.asset.json";
