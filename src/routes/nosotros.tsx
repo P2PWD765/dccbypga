@@ -162,6 +162,15 @@ function TeamGrid() {
                   <p className="mt-1 text-sm font-medium text-brand-teal">
                     {member.role}
                   </p>
+                  <a
+                    href={`mailto:${member.email}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-brand-teal transition-colors hover:bg-brand-ice hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                    aria-label={`Enviar correo a ${member.name}`}
+                    title="Enviar correo"
+                  >
+                    <Mail className="h-4 w-4" />
+                  </a>
                   <p className="mt-4 text-sm leading-relaxed text-brand-mid">
                     {member.shortBio}
                   </p>
