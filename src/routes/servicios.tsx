@@ -43,6 +43,8 @@ const servicios = [
     description:
       "Te brindamos tranquilidad a través de soluciones efectuadas a la medida en un marco legal en la aplicación de las disposiciones fiscales considerando las necesidades particulares, con un enfoque principal en el cuidado del patrimonio de nuestros clientes.",
     email: "asesoria@dcc-asesores.com",
+    mailto:
+      "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB",
   },
   {
     title: "Cumplimiento y Devoluciones",
@@ -50,6 +52,8 @@ const servicios = [
     description:
       "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
     email: "cumplimiento@dcc-asesores.com",
+    mailto:
+      "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB",
   },
   {
     title: "Controversia",
@@ -57,6 +61,8 @@ const servicios = [
     description:
       "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
     email: "controversia@dcc-asesores.com",
+    mailto:
+      "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB",
   },
   {
     title: "Enfoque Holístico",
@@ -118,9 +124,12 @@ function ServiciosPage() {
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
                     <a
-                      href={`mailto:${s.email}?subject=${encodeURIComponent(
-                        `Consulta sobre ${s.title} — DCC Asesores`,
-                      )}`}
+                      href={
+                        s.mailto ??
+                        `mailto:${s.email}?subject=${encodeURIComponent(
+                          `Consulta sobre ${s.title} — DCC Asesores`,
+                        )}`
+                      }
                     >
                       Contáctanos
                     </a>
