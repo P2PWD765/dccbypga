@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Play } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
@@ -24,12 +23,20 @@ export const Route = createFileRoute("/blogs")({
 });
 
 const blogs = [
-  { title: "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego", duration: "12:04" },
-  { title: "De los fondos de Fox a tu negocio: por qué emprender en México sí es posible con la guía correcta", duration: "10:47" },
-  { title: "Transformación digital empresarial", duration: "15:21" },
-  { title: "Gobierno corporativo efectivo", duration: "10:47" },
-  { title: "Gestión del talento estratégico", duration: "09:15" },
-  { title: "Expansión internacional", duration: "13:58" },
+  {
+    title:
+      "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego",
+    image:
+      "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1200&q=80",
+    alt: "Skyline corporativo de Ciudad de México al atardecer",
+  },
+  {
+    title:
+      "De los fondos de Fox a tu negocio: por qué emprender en México sí es posible con la guía correcta",
+    image:
+      "https://images.unsplash.com/photo-1553729459-efe14ef6055d?auto=format&fit=crop&w=1200&q=80",
+    alt: "Reunión de estrategia de negocio y finanzas",
+  },
 ];
 
 function BlogsPage() {
@@ -48,9 +55,8 @@ function BlogsPage() {
               </h1>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2">
               {blogs.map((v, idx) => (
-                idx === 0 || idx === 1 ? (
                 <Link
                   key={v.title}
                   to="/blog/$slug"
@@ -59,14 +65,6 @@ function BlogsPage() {
                 >
                   <CardBody v={v} idx={idx} />
                 </Link>
-                ) : (
-                <div
-                  key={v.title}
-                  className="group cursor-pointer overflow-hidden rounded-2xl ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <CardBody v={v} idx={idx} />
-                </div>
-                )
               ))}
             </div>
           </div>
@@ -81,28 +79,18 @@ function CardBody({
   v,
   idx,
 }: {
-  v: { title: string; duration: string };
+  v: { title: string; image: string; alt: string };
   idx: number;
 }) {
   return (
     <>
-                <div
-                  className="relative flex aspect-video items-center justify-center overflow-hidden"
-                  style={{
-                    background:
-                      idx % 3 === 0
-                        ? "linear-gradient(135deg,#064E3B,#065F46)"
-                        : idx % 3 === 1
-                        ? "linear-gradient(135deg,#10B981,#065F46)"
-                        : "linear-gradient(135deg,#065F46,#064E3B)",
-                  }}
-                >
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-lg transition-transform group-hover:scale-110">
-                    <Play className="h-6 w-6 translate-x-0.5 fill-brand-teal text-brand-teal" />
-                  </div>
-                  <span className="absolute bottom-3 right-3 rounded bg-black/60 px-2 py-1 text-xs font-medium text-white">
-                    {v.duration}
-                  </span>
+                <div className="relative aspect-video overflow-hidden">
+                  <img
+                    src={v.image}
+                    alt={v.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
                 <div className="bg-white p-6">
                   <h3 className="text-base font-semibold text-brand">
