@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { User } from "lucide-react";
+import { User, Mail } from "lucide-react";
 import davidRuizAsset from "@/assets/david-ruiz.png.asset.json";
 import carlosVillegasAsset from "@/assets/carlos-villegas.png.asset.json";
 import cesarHernandezAsset from "@/assets/cesar-hernandez.png.asset.json";
@@ -37,6 +37,7 @@ const team = [
   {
     name: "David Edgardo Ruiz Enríquez",
     role: "Asesor de Negocios y Especialista Fiscal",
+    email: "druiz@dcc-asesores.com",
     contact: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
     shortBio:
       "Especialista en materia fiscal y negocios con más de 30 años de experiencia. Exsocio de Impuestos Internacionales en Ernst & Young y exfuncionario de Grandes Contribuyentes en el SAT. Cuenta con una sólida trayectoria en consultoría nacional e internacional y docencia de posgrado.",
@@ -46,6 +47,7 @@ const team = [
   {
     name: "Carlos Alberto Villegas Pérez",
     role: "Especialista en Fiscalización y Controversia",
+    email: "cvillegas@dcc-asesores.com",
     contact: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
     shortBio:
       "Contador Público y Maestro en Derecho Fiscal con más de 12 años de trayectoria dual en el SAT (Grandes Contribuyentes e Hidrocarburos) y la asesoría privada. Experto en mitigación de riesgos fiscales y atención de auditorías corporativas.",
@@ -55,6 +57,7 @@ const team = [
   {
     name: "Carlos César Hernandez",
     role: "Consultor de Impuestos Nacionales e Internacionales",
+    email: "chernandez@dcc-asesores.com",
     contact: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     shortBio:
       "Especialista en consultoría fiscal, fusiones y reestructuras corporativas con más de 20 años de experiencia. Ha asesorado a importantes grupos empresariales como Televisa, Grupo Ángeles y Grupo Bal en diversos sectores comerciales e industriales.",
@@ -159,6 +162,15 @@ function TeamGrid() {
                   <p className="mt-1 text-sm font-medium text-brand-teal">
                     {member.role}
                   </p>
+                  <a
+                    href={`mailto:${member.email}`}
+                    onClick={(e) => e.stopPropagation()}
+                    className="mt-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-brand-teal transition-colors hover:bg-brand-ice hover:text-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
+                    aria-label={`Enviar correo a ${member.name}`}
+                    title="Enviar correo"
+                  >
+                    <Mail className="h-4 w-4" />
+                  </a>
                   <p className="mt-4 text-sm leading-relaxed text-brand-mid">
                     {member.shortBio}
                   </p>
