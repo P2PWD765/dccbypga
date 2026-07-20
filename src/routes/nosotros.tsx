@@ -47,6 +47,7 @@ const team = [
   {
     name: "Carlos Alberto Villegas Pérez",
     role: "Especialista en Fiscalización y Controversia",
+    email: "cvillegas@dcc-asesores.com",
     contact: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
     shortBio:
       "Contador Público y Maestro en Derecho Fiscal con más de 12 años de trayectoria dual en el SAT (Grandes Contribuyentes e Hidrocarburos) y la asesoría privada. Experto en mitigación de riesgos fiscales y atención de auditorías corporativas.",
