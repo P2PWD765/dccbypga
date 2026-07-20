@@ -124,9 +124,12 @@ function ServiciosPage() {
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
                     <a
-                      href={`mailto:${s.email}?subject=${encodeURIComponent(
-                        `Consulta sobre ${s.title} — DCC Asesores`,
-                      )}`}
+                      href={
+                        s.mailto ??
+                        `mailto:${s.email}?subject=${encodeURIComponent(
+                          `Consulta sobre ${s.title} — DCC Asesores`,
+                        )}`
+                      }
                     >
                       Contáctanos
                     </a>
