@@ -189,14 +189,18 @@ function Hero() {
           retos en oportunidades sostenibles.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
-          <button
+          <Link
+            to="/servicios"
             className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-brand transition-all hover:bg-brand-ice hover:-translate-y-0.5"
           >
             Conozca nuestros servicios <ArrowRight className="h-4 w-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10">
+          </Link>
+          <a
+            href={homeServiciosMailto}
+            className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+          >
             Contáctenos
-          </button>
+          </a>
         </div>
       </div>
     </section>
