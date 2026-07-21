@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HeartHandshake, Award, Crosshair, Users, Lightbulb } from "lucide-react";
+import holisticoImg from "@/assets/svc-holistico.jpg.asset.json";
 
 export const Route = createFileRoute("/conocenos/cultura")({
   head: () => ({
@@ -146,6 +147,39 @@ function CulturaPage() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Enfoque Holístico */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5">
+              <img
+                src={holisticoImg.url}
+                alt="Enfoque Holístico"
+                loading="lazy"
+                width={1024}
+                height={576}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div>
+              <p className="mb-3 text-xs font-medium uppercase tracking-[0.4em] text-brand-teal">
+                Complemento
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight text-brand sm:text-4xl">
+                Enfoque Holístico
+              </h2>
+              <div className="mt-5 h-1 w-16 rounded-full bg-brand-teal" />
+              <p className="mt-6 text-lg leading-relaxed text-brand-mid">
+                La experiencia de nuestra Firma, permite tener un enfoque
+                holístico, que conlleva a un servicio integral, basado en el
+                entendimiento del modelo de negocio de cada uno de nuestros
+                clientes.
+              </p>
+            </div>
           </div>
         </div>
       </section>
