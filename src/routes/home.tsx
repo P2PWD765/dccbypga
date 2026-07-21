@@ -31,7 +31,7 @@ import cesarHernandezAsset from "@/assets/cesar-hernandez.png.asset.json";
 import asesoriaImg from "@/assets/svc-asesoria.jpg.asset.json";
 import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
 import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
-import holisticoImg from "@/assets/svc-holistico.jpg.asset.json";
+
 import otrosImg from "@/assets/svc-otros.jpg.asset.json";
 
 export const Route = createFileRoute("/home")({
@@ -109,12 +109,6 @@ const servicios = [
     image: controversiaImg.url,
     description:
       "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
-  },
-  {
-    title: "Enfoque Holístico",
-    image: holisticoImg.url,
-    description:
-      "La experiencia de nuestra Firma, permite tener un enfoque holístico, que conlleva a un servicio integral, basado en el entendimiento del modelo de negocio de cada uno de nuestros clientes.",
   },
   {
     title: "Otros Servicios",
