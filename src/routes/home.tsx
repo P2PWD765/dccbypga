@@ -25,9 +25,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import davidRuizAsset from "@/assets/david-ruiz.png.asset.json";
-import carlosVillegasAsset from "@/assets/carlos-villegas.png.asset.json";
-import cesarHernandezAsset from "@/assets/cesar-hernandez.png.asset.json";
+import { team } from "@/data/team";
 import asesoriaImg from "@/assets/svc-asesoria.jpg.asset.json";
 import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
 import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
@@ -54,39 +52,6 @@ export const Route = createFileRoute("/home")({
   component: HomePage,
 });
 
-
-const team = [
-  {
-    name: "David Edgardo Ruiz Enríquez",
-    role: "Asesor de Negocios y Especialista Fiscal",
-    email: "druiz@dcc-asesores.com",
-    contact: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
-    shortBio:
-      "Especialista en materia fiscal y negocios con más de 30 años de experiencia. Con trayectoria en consultoría fiscal internacional y en la administración tributaria de grandes contribuyentes. Cuenta con una sólida experiencia en asesoría nacional e internacional y docencia de posgrado.",
-    bio: "Asesor de negocios y especialista en materia fiscal con más de 30 años de experiencia. En la práctica privada desarrolló diversas actividades económicas en las industrias de consultoría fiscal internacional y asesoría corporativa, donde participó como socio y director de oficinas regionales, atendiendo empresas nacionales e internacionales. En la administración pública federal, se desempeñó en distintas responsabilidades directivas en materia de planeación, auditoría fiscal internacional, normatividad internacional y programas de cooperación voluntaria con grandes contribuyentes.",
-    photo: davidRuizAsset.url,
-  },
-  {
-    name: "Carlos Alberto Villegas Pérez",
-    role: "Especialista en Fiscalización y Controversia",
-    email: "cvillegas@dcc-asesores.com",
-    contact: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
-    shortBio:
-      "Contador Público y Maestro en Derecho Fiscal con más de 12 años de trayectoria dual en la administración tributaria (Grandes Contribuyentes e Hidrocarburos) y la asesoría privada. Experto en mitigación de riesgos fiscales y atención de auditorías corporativas.",
-    bio: "Especialista en materia fiscal con más de 12 años de experiencia en fiscalización y controversia, con una trayectoria que combina su experiencia tanto en la administración tributaria como en la asesoría privada, lo que le permite abordar los asuntos fiscales desde una perspectiva integral y estratégica. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal y administrativo.",
-    photo: carlosVillegasAsset.url,
-  },
-  {
-    name: "Carlos César Hernandez",
-    role: "Consultor de Impuestos Nacionales e Internacionales",
-    email: "chernandez@dcc-asesores.com",
-    contact: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
-    shortBio:
-      "Especialista en consultoría fiscal, fusiones y reestructuras corporativas con más de 20 años de experiencia. Ha asesorado a importantes grupos empresariales en diversos sectores comerciales e industriales.",
-    bio: "Experiencia profesional de más de 20 años en asesoría de impuestos tanto en el área nacional como internacional, en aspectos como reestructuras corporativas, fusiones, escisiones, costos fiscales, inversiones patrimoniales, diagnósticos tributarios y consultoría fiscal. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal por la Universidad Panamericana.",
-    photo: cesarHernandezAsset.url,
-  },
-];
 
 const homeServiciosMailto =
   "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB";
