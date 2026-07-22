@@ -31,6 +31,7 @@ import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
 import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
 
 import otrosImg from "@/assets/svc-otros.jpg.asset.json";
+import blogMexicoBoom from "@/assets/blog-mexico-boom.jpg.asset.json";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -86,8 +87,7 @@ const servicios = [
 const blogs = [
   {
     title: "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego",
-    image:
-      "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1200&q=80",
+    image: blogMexicoBoom.url,
     alt: "Skyline corporativo de Ciudad de México al atardecer",
     description:
       "México está atravesando un momento histórico con el nearshoring. Descubre por qué tu negocio necesita estrategas que conocieron las reglas del juego desde adentro.",
