@@ -62,8 +62,8 @@ const team = [
     email: "druiz@dcc-asesores.com",
     contact: "Contacto: druiz@dcc-asesores.com\nTelefono: 442 285 3839",
     shortBio:
-      "Especialista en materia fiscal y negocios con más de 30 años de experiencia. Exsocio de Impuestos Internacionales en Ernst & Young y exfuncionario de Grandes Contribuyentes en el SAT. Cuenta con una sólida trayectoria en consultoría nacional e internacional y docencia de posgrado.",
-    bio: "Asesor de negocios y especialista en materia fiscal con más de 30 años de experiencia. En la iniciativa privada inició su carrera en la firma Ernst & Young, donde fue Socio en el área de Impuestos Internacionales. Posteriormente colaboró en el despacho GL como Socio Director de la Oficina Noreste de México. En ambas Firmas tuvo la oportunidad de asesorar a Empresas Nacionales e Internacionales. En el Servicio de Administración Tributaria, se desempeñó como Administrador Central de Planeación y Programación en Grandes Contribuyentes, Administrador Central de Auditoría Fiscal Internacional y también fungió como Administrador Central encargado del Programa de Cooperación Voluntaria con Grandes Contribuyentes.",
+      "Especialista en materia fiscal y negocios con más de 30 años de experiencia. Con trayectoria en consultoría fiscal internacional y en la administración tributaria de grandes contribuyentes. Cuenta con una sólida experiencia en asesoría nacional e internacional y docencia de posgrado.",
+    bio: "Asesor de negocios y especialista en materia fiscal con más de 30 años de experiencia. En la práctica privada desarrolló diversas actividades económicas en las industrias de consultoría fiscal internacional y asesoría corporativa, donde participó como socio y director de oficinas regionales, atendiendo empresas nacionales e internacionales. En la administración pública federal, se desempeñó en distintas responsabilidades directivas en materia de planeación, auditoría fiscal internacional, normatividad internacional y programas de cooperación voluntaria con grandes contribuyentes.",
     photo: davidRuizAsset.url,
   },
   {
@@ -72,8 +72,8 @@ const team = [
     email: "cvillegas@dcc-asesores.com",
     contact: "Contacto: cvillegas@dcc-asesores.com\nTelefono: 813 414 0206",
     shortBio:
-      "Contador Público y Maestro en Derecho Fiscal con más de 12 años de trayectoria dual en el SAT (Grandes Contribuyentes e Hidrocarburos) y la asesoría privada. Experto en mitigación de riesgos fiscales y atención de auditorías corporativas.",
-    bio: "Especialista en materia fiscal con más de 12 años de experiencia en fiscalización y controversia, con una trayectoria que combina su experiencia tanto como autoridad y asesor, lo que le permite abordar los asuntos fiscales desde una perspectiva integral y estratégica. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal y administrativo por la Universidad Anáhuac.",
+      "Contador Público y Maestro en Derecho Fiscal con más de 12 años de trayectoria dual en la administración tributaria (Grandes Contribuyentes e Hidrocarburos) y la asesoría privada. Experto en mitigación de riesgos fiscales y atención de auditorías corporativas.",
+    bio: "Especialista en materia fiscal con más de 12 años de experiencia en fiscalización y controversia, con una trayectoria que combina su experiencia tanto en la administración tributaria como en la asesoría privada, lo que le permite abordar los asuntos fiscales desde una perspectiva integral y estratégica. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal y administrativo.",
     photo: carlosVillegasAsset.url,
   },
   {
@@ -82,7 +82,7 @@ const team = [
     email: "chernandez@dcc-asesores.com",
     contact: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     shortBio:
-      "Especialista en consultoría fiscal, fusiones y reestructuras corporativas con más de 20 años de experiencia. Ha asesorado a importantes grupos empresariales como Televisa, Grupo Ángeles y Grupo Bal en diversos sectores comerciales e industriales.",
+      "Especialista en consultoría fiscal, fusiones y reestructuras corporativas con más de 20 años de experiencia. Ha asesorado a importantes grupos empresariales en diversos sectores comerciales e industriales.",
     bio: "Experiencia profesional de más de 20 años en asesoría de impuestos tanto en el área nacional como internacional, en aspectos como reestructuras corporativas, fusiones, escisiones, costos fiscales, inversiones patrimoniales, diagnósticos tributarios y consultoría fiscal. Contador Público por la Escuela Superior de Comercio y Administración (ESCA), cuenta con una maestría en Derecho Fiscal por la Universidad Panamericana.",
     photo: cesarHernandezAsset.url,
   },
