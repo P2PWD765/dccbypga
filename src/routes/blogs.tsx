@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import blogMexicoBoom from "@/assets/blog-mexico-boom.jpg.asset.json";
 
 export const Route = createFileRoute("/blogs")({
   head: () => ({
@@ -26,8 +27,7 @@ const blogs = [
   {
     title:
       "Surfeando el Boom de México: Por qué tu negocio necesita a los que diseñaron las reglas del juego",
-    image:
-      "https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1200&q=80",
+    image: blogMexicoBoom.url,
     alt: "Skyline corporativo de Ciudad de México al atardecer",
   },
   {
