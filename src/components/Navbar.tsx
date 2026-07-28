@@ -11,20 +11,20 @@ import logo from "@/assets/dcc-logo.png";
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-brand text-white shadow-md">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <Link to="/home" className="flex items-center gap-3">
-          <div className="rounded bg-white px-2 py-1">
-            <img src={logo} alt="DCC" className="h-7 w-auto" />
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 sm:h-24 sm:px-6">
+        <Link to="/home" className="flex shrink-0 items-center gap-3">
+          <div className="rounded-md bg-white px-3 py-2">
+            <img src={logo} alt="DCC Asesores Empresariales" className="h-12 w-auto sm:h-14 md:h-16" />
           </div>
-          <span className="hidden text-sm font-medium uppercase tracking-[0.18em] sm:inline">
+          <span className="hidden text-sm font-medium uppercase tracking-[0.18em] lg:inline">
             DCC Asesores
           </span>
         </Link>
 
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="flex flex-wrap items-center justify-end gap-0.5 sm:gap-2">
           <Link
             to="/servicios"
-            className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10"
+            className="rounded-md px-2 py-2 text-xs font-medium transition-colors hover:bg-white/10 sm:px-3 sm:text-sm"
             activeProps={{ className: "bg-white/15" }}
           >
             Servicios
@@ -32,7 +32,7 @@ export function Navbar() {
 
           <Link
             to="/nosotros"
-            className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10"
+            className="rounded-md px-2 py-2 text-xs font-medium transition-colors hover:bg-white/10 sm:px-3 sm:text-sm"
             activeProps={{ className: "bg-white/15" }}
           >
             Nosotros
@@ -40,14 +40,14 @@ export function Navbar() {
 
           <Link
             to="/blogs"
-            className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10"
+            className="rounded-md px-2 py-2 text-xs font-medium transition-colors hover:bg-white/10 sm:px-3 sm:text-sm"
             activeProps={{ className: "bg-white/15" }}
           >
             Blogs
           </Link>
 
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 focus:outline-none">
+            <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-md px-2 py-2 text-xs font-medium transition-colors hover:bg-white/10 focus:outline-none sm:px-3 sm:text-sm">
               Conócenos <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-52">

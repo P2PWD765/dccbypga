@@ -10,10 +10,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import asesoriaImg from "@/assets/svc-asesoria.jpg.asset.json";
-import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
-import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
-import otrosImg from "@/assets/svc-otros.jpg.asset.json";
+import { services, contactoMailto } from "@/data/services";
 
 export const Route = createFileRoute("/servicios")({
   head: () => ({
@@ -35,38 +32,7 @@ export const Route = createFileRoute("/servicios")({
   component: ServiciosPage,
 });
 
-const sharedMailto =
-  "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB";
-
-const servicios = [
-  {
-    title: "Asesoría",
-    image: asesoriaImg.url,
-    description:
-      "Te brindamos tranquilidad a través de soluciones efectuadas a la medida en un marco legal en la aplicación de las disposiciones fiscales considerando las necesidades particulares, con un enfoque principal en el cuidado del patrimonio de nuestros clientes.",
-    mailto: sharedMailto,
-  },
-  {
-    title: "Cumplimiento y Devoluciones",
-    image: cumplimientoImg.url,
-    description:
-      "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
-    mailto: sharedMailto,
-  },
-  {
-    title: "Controversia",
-    image: controversiaImg.url,
-    description: "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
-    mailto: sharedMailto,
-  },
-  {
-    title: "Otros Servicios",
-    image: otrosImg.url,
-    description:
-      "Precios de Transferencia, apoyamos en la correcta determinación del valor justo de mercado, así como asesoramos en la aplicación de las normas aplicables en esta materia. Tax Technology implementamos herramientas tecnológicas que facilitan y aseguran el manejo de tu información fiscal, legal, etc, para un debido cumplimiento.",
-    mailto: sharedMailto,
-  },
-];
+const servicios = services;
 
 function ServiciosPage() {
   return (
@@ -111,7 +77,7 @@ function ServiciosPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
-                    <a href={s.mailto}>Contáctanos</a>
+                    <a href={contactoMailto}>Contáctanos</a>
                   </Button>
                 </CardFooter>
               </Card>
