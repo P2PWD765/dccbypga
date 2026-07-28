@@ -35,7 +35,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Carlos César Hernández",
-    role: "Consultor de Impuestos Nacionales e Internacionales",
+    role: "Consultor de Impuestos y Asesor Patrimonial",
     email: "chernandez@dcc-asesores.com",
     contact: "Contacto: chernandez@dcc-asesores.com\nTelefono: 554 950 7029",
     shortBio:

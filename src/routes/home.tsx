@@ -26,11 +26,8 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { team } from "@/data/team";
-import asesoriaImg from "@/assets/svc-asesoria.jpg.asset.json";
-import cumplimientoImg from "@/assets/svc-cumplimiento.jpg.asset.json";
-import controversiaImg from "@/assets/svc-controversia.jpg.asset.json";
-
-import otrosImg from "@/assets/svc-otros.jpg.asset.json";
+import { services, contactoMailto } from "@/data/services";
+import { WhatsAppFloatingMenu } from "@/components/WhatsAppMenu";
 import blogMexicoBoom from "@/assets/blog-mexico-boom.jpg.asset.json";
 
 export const Route = createFileRoute("/home")({
@@ -54,35 +51,8 @@ export const Route = createFileRoute("/home")({
 });
 
 
-const homeServiciosMailto =
-  "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB";
-
-const servicios = [
-  {
-    title: "Asesoría",
-    image: asesoriaImg.url,
-    description:
-      "Te brindamos tranquilidad a través de soluciones efectuadas a la medida en un marco legal en la aplicación de las disposiciones fiscales considerando las necesidades particulares, con un enfoque principal en el cuidado del patrimonio de nuestros clientes.",
-  },
-  {
-    title: "Cumplimiento y Devoluciones",
-    image: cumplimientoImg.url,
-    description:
-      "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
-  },
-  {
-    title: "Controversia",
-    image: controversiaImg.url,
-    description:
-      "Diseñamos estrategias legales sólidas para proteger tu patrimonio y resolver cualquier disputa con seguridad y respaldo experto, en auditorías, cartas invitación o cualquier acto de fiscalización.",
-  },
-  {
-    title: "Otros Servicios",
-    image: otrosImg.url,
-    description:
-      "Precios de Transferencia, apoyamos en la correcta determinación del valor justo de mercado, así como asesoramos en la aplicación de las normas aplicables en esta materia. Tax Technology implementamos herramientas tecnológicas que facilitan y aseguran el manejo de tu información fiscal, legal, etc, para un debido cumplimiento.",
-  },
-];
+const homeServiciosMailto = contactoMailto;
+const servicios = services;
 
 const blogs = [
   {
@@ -110,10 +80,12 @@ function HomePage() {
       <main>
         <Hero />
         <TeamSection />
+        <AlianzasSection />
         <ServiciosSection />
         <Blogs />
       </main>
       <Footer />
+      <WhatsAppFloatingMenu />
     </div>
   );
 }
@@ -134,7 +106,7 @@ function Hero() {
             "radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%)",
         }}
       />
-      <div className="relative mx-auto max-w-5xl px-6 py-28 sm:py-36 md:py-44">
+      <div className="relative mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center px-6 py-24 text-center sm:py-32 md:py-36">
         <p className="mb-6 text-xs font-medium uppercase tracking-[0.4em] text-white">
           Consultoría Empresarial
         </p>
@@ -142,12 +114,12 @@ function Hero() {
           Estrategia, claridad y resultados para empresas que buscan crecer con
           inteligencia.
         </h1>
-        <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white">
+        <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white">
           En DCC Asesores Empresariales acompañamos a líderes y directivos con
           asesoría financiera, fiscal y estratégica diseñada para transformar
           retos en oportunidades sostenibles.
         </p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
             to="/servicios"
             className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-brand transition-all hover:bg-brand-ice hover:-translate-y-0.5"
@@ -256,6 +228,41 @@ function TeamSection() {
 }
 
 function ServiciosSection() {
+  return (
+    <ServiciosCarousel />
+  );
+}
+
+function AlianzasSection() {
+  return (
+    <section className="bg-brand py-14 text-white">
+      <div className="mx-auto max-w-4xl px-6 text-center">
+        <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-white/80">
+          Alianzas
+        </p>
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          Formamos parte de
+        </h2>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-white/20 px-6 py-6">
+            <p className="text-lg font-semibold">COPARMEX</p>
+            <p className="mt-2 text-sm leading-relaxed text-white/85">
+              Confederación Patronal de la República Mexicana, capítulo Querétaro.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/20 px-6 py-6">
+            <p className="text-lg font-semibold">CAINTRA</p>
+            <p className="mt-2 text-sm leading-relaxed text-white/85">
+              Cámara Nacional de la Industria de Transformación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServiciosCarousel() {
   return (
     <section className="bg-brand-ice py-24">
       <div className="mx-auto max-w-7xl px-6">
