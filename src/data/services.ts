@@ -5,8 +5,16 @@ import otrosImg from "@/assets/svc-otros.jpg.asset.json";
 import consultoriaFiscalImg from "@/assets/svc-consultoria-fiscal.jpg";
 import tecnologiaImg from "@/assets/svc-tecnologia.jpg";
 
+// Un solo destinatario principal + copias: más compatible con Gmail/Outlook web,
+// donde las listas separadas por comas en el "to" suelen descartarse.
 export const contactoMailto =
-  "mailto:druiz@dcc-asesores.com,cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com?subject=CLIENTEPAGINAWEB";
+  "mailto:druiz@dcc-asesores.com" +
+  "?cc=cvillegas@dcc-asesores.com,chernandez@dcc-asesores.com" +
+  "&subject=CLIENTEPAGINAWEB" +
+  "&body=" +
+  encodeURIComponent(
+    "Hola, me comunico desde la página web de DCC Asesores Empresariales.\n\nNombre:\nEmpresa:\nTeléfono:\nMensaje:",
+  );
 
 export type Service = {
   title: string;
