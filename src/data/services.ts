@@ -28,16 +28,10 @@ export const services: Service[] = [
       "Analizamos e interpretamos las disposiciones fiscales aplicables a cada operación para brindar certeza y eficiencia, con recomendaciones técnicas sólidas para la toma de decisiones de negocio.",
   },
   {
-    title: "Cumplimiento",
+    title: "Cumplimiento y Devoluciones",
     image: cumplimientoImg.url,
     description:
-      "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente.",
-  },
-  {
-    title: "Devoluciones",
-    image: cumplimientoImg.url,
-    description:
-      "Gestión y recuperación de saldos a favor ante las autoridades, integrando la documentación soporte y dando seguimiento puntual a cada trámite.",
+      "Ejecución oportuna de las obligaciones fiscales, garantizando la correcta aplicación de la normatividad vigente. Gestión y recuperación de saldos a favor ante las autoridades.",
   },
   {
     title: "Controversia",
