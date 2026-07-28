@@ -229,6 +229,41 @@ function TeamSection() {
 
 function ServiciosSection() {
   return (
+    <ServiciosCarousel />
+  );
+}
+
+function AlianzasSection() {
+  return (
+    <section className="bg-brand py-14 text-white">
+      <div className="mx-auto max-w-4xl px-6 text-center">
+        <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-white/80">
+          Alianzas
+        </p>
+        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          Formamos parte de
+        </h2>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-white/20 px-6 py-6">
+            <p className="text-lg font-semibold">COPARMEX</p>
+            <p className="mt-2 text-sm leading-relaxed text-white/85">
+              Confederación Patronal de la República Mexicana, capítulo Querétaro.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/20 px-6 py-6">
+            <p className="text-lg font-semibold">CAINTRA</p>
+            <p className="mt-2 text-sm leading-relaxed text-white/85">
+              Cámara Nacional de la Industria de Transformación.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ServiciosCarousel() {
+  return (
     <section className="bg-brand-ice py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-14 flex items-end justify-between gap-6">
