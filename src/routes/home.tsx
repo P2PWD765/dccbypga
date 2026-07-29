@@ -245,12 +245,28 @@ function AlianzasSection() {
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <div className="rounded-2xl border border-white/20 px-6 py-6">
+            <div className="mb-4 flex h-24 items-center justify-center rounded-xl bg-white p-4">
+              <img
+                src="/assets/coparmex.png"
+                alt="Logo de COPARMEX"
+                loading="lazy"
+                className="max-h-full w-auto object-contain"
+              />
+            </div>
             <p className="text-lg font-semibold">COPARMEX</p>
             <p className="mt-2 text-sm leading-relaxed text-white/85">
               Confederación Patronal de la República Mexicana, capítulo Querétaro.
             </p>
           </div>
           <div className="rounded-2xl border border-white/20 px-6 py-6">
+            <div className="mb-4 flex h-24 items-center justify-center rounded-xl bg-white p-4">
+              <img
+                src="/assets/caintra.png"
+                alt="Logo de CAINTRA"
+                loading="lazy"
+                className="max-h-full w-auto object-contain"
+              />
+            </div>
             <p className="text-lg font-semibold">CAINTRA</p>
             <p className="mt-2 text-sm leading-relaxed text-white/85">
               Cámara Nacional de la Industria de Transformación.
