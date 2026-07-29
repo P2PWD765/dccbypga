@@ -245,7 +245,7 @@ function AlianzasSection() {
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <div className="rounded-2xl border border-white/20 px-6 py-6">
-            <div className="mb-4 flex h-40 items-center justify-center rounded-xl bg-white p-4 sm:h-48">
+            <div className="mb-4 flex h-40 items-center justify-center rounded-xl bg-white/10 p-4 sm:h-48">
               <img
                 src="/assets/coparmex.png"
                 alt="Logo de COPARMEX"
@@ -259,7 +259,7 @@ function AlianzasSection() {
             </p>
           </div>
           <div className="rounded-2xl border border-white/20 px-6 py-6">
-            <div className="mb-4 flex h-40 items-center justify-center rounded-xl bg-white p-4 sm:h-48">
+            <div className="mb-4 flex h-40 items-center justify-center rounded-xl bg-white/10 p-4 sm:h-48">
               <img
                 src="/assets/caintra.png"
                 alt="Logo de CAINTRA"
